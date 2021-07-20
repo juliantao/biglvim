@@ -98,13 +98,26 @@ O.lang.latex.latexindent.modify_line_breaks = false
 -- O.lang.latex.ignore_errors = { }
 
 -- Additional Plugins
--- O.user_plugins = {
---     {"folke/tokyonight.nvim"}, {
---         "ray-x/lsp_signature.nvim",
---         config = function() require"lsp_signature".on_attach() end,
---         event = "InsertEnter"
---     }
--- }
+O.user_plugins = {
+  {"folke/tokyonight.nvim"},
+  {"sainnhe/gruvbox-material"},
+  {"preservim/vim-pencil"},
+  {"reedes/vim-wordy"},
+  {"farmergreg/vim-lastplace"},
+  {"vim-pandoc/vim-pandoc"},
+  {"vim-pandoc/vim-pandoc-syntax"},
+  {"vim-pandoc/vim-rmarkdown"},
+  {"jalvesaq/Nvim-R"},
+  -- {"jalvesaq/zotcite"},
+  {"dkarter/bullets.vim"},
+  {"junegunn/vim-easy-align"},
+  {"christianchiarulli/nvcode-color-schemes.vim"},
+  {
+        "ray-x/lsp_signature.nvim",
+        config = function() require"lsp_signature".on_attach() end,
+        event = "InsertEnter"
+    }
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
