@@ -13,7 +13,7 @@ an executable
 O.format_on_save = true
 O.lint_on_save = true
 O.completion.autocomplete = true
-O.colorscheme = "spacegray"
+O.colorscheme = "gruvbox-material"
 O.default_options.wrap = true
 O.default_options.timeoutlen = 100
 -- keymappings
@@ -130,3 +130,5 @@ O.user_plugins = {
 --     b = { "<cmd>echo 'second custom command'<cr>", "Description for b" },
 --   },
 -- }
+-- To link your init.vim (until you find Lua replacements)
+vim.cmd('source ' .. '$HOME/Dropbox (ASU)/Scripts/Dotfiles/lvim.vim')
