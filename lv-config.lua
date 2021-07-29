@@ -60,7 +60,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-  {"folke/tokyonight.nvim"},
   {"lervag/vimtex"},
   {"sainnhe/gruvbox-material"},
   {"preservim/vim-pencil"},
@@ -73,7 +72,6 @@ lvim.plugins = {
   -- {"jalvesaq/zotcite"},
   {"dkarter/bullets.vim"},
   {"junegunn/vim-easy-align"},
-  {"christianchiarulli/nvcode-color-schemes.vim"},
   {
         "ray-x/lsp_signature.nvim",
         config = function() require"lsp_signature".on_attach() end,
