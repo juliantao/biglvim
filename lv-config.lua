@@ -58,6 +58,10 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- python
 
+-- R
+-- lvim.lang.r.formatter.exe = "styler"
+-- lvim.lang.r.linters.exe = "lintr"
+
 -- Additional Plugins
 lvim.plugins = {
   {"lervag/vimtex"},
