@@ -12,7 +12,7 @@ an executable
 
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "spacegray"
+lvim.colorscheme = "gruvbox-material"
 -- keymappings
 lvim.leader = "space"
 -- overwrite the key-mappings provided by LunarVim for any mode, or leave it empty to keep them
@@ -59,7 +59,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- python
 
 -- R
-lvim.lang.r.formatter.exe = ""
 -- lvim.lang.r.linters.exe = "lintr"
 
 -- Additional Plugins
