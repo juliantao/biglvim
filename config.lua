@@ -59,7 +59,8 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- python
 
 -- R
--- lvim.lang.r.linters.exe = "lintr"
+lvim.lang.r.linters.exe = "lintr"
+lvim.lang.r.formatters.exe = "styler"
 
 -- Additional Plugins
 lvim.plugins = {
@@ -67,6 +68,7 @@ lvim.plugins = {
   {"sainnhe/gruvbox-material"},
   {"preservim/vim-pencil"},
   {"reedes/vim-wordy"},
+  {"rhysd/vim-grammarous"},
   {"farmergreg/vim-lastplace"},
   {"vim-pandoc/vim-pandoc"},
   {"vim-pandoc/vim-pandoc-syntax"},
@@ -83,9 +85,10 @@ lvim.plugins = {
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
+lvim.autocommands.custom_groups = {
+  {"FileType", "rmarkdown", "set filetype=rmd" },
+}
+
 
 -- Additional Leader bindings for WhichKey
 
