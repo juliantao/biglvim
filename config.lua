@@ -59,8 +59,8 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- python
 
 -- R
-lvim.lang.r.linters.exe = "lintr"
-lvim.lang.r.formatters.exe = "styler"
+-- lvim.lang.r.linters.exe = "lintr"
+-- lvim.lang.r.formatters.exe = "styler"
 
 -- Additional Plugins
 lvim.plugins = {
@@ -74,7 +74,6 @@ lvim.plugins = {
   {"vim-pandoc/vim-pandoc-syntax"},
   {"vim-pandoc/vim-rmarkdown"},
   {"jalvesaq/Nvim-R"},
-  -- {"jalvesaq/zotcite"},
   {"dkarter/bullets.vim"},
   {"junegunn/vim-easy-align"},
   {
