@@ -27,6 +27,11 @@ lvim.builtin.bufferline.active = true
 lvim.plugins = {
 	{ "sainnhe/gruvbox-material" },
 	{ "reedes/vim-wordy" },
+	{
+		"tpope/vim-surround",
+		keys = { "c", "d", "y" },
+	},
+	{ "tpope/vim-repeat" },
 	{ "ray-x/lsp_signature.nvim" },
 	{
 		"lervag/vimtex",
