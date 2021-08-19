@@ -12,6 +12,8 @@ lvim.keys.normal_mode["<Localleader>mm"] = "i <++>"
 lvim.keys.normal_mode["<Localleader>,"] = "/<++><CR>c4l"
 lvim.keys.normal_mode["<localleader>z"] = '"=ZoteroCite()<CR>p'
 lvim.keys.insert_mode["<C-z>"] = "<C-r>=ZoteroCite()<CR>"
+lvim.builtin.which_key.mappings["gd"] = { "<cmd>DiffviewOpen HEAD~1<cr>", "Diff" }
+lvim.builtin.which_key.mappings["tr"] = { "<cmd>RnvimrToggle<cr>", "Ranger" }
 
 -- Plugins
 lvim.builtin.dashboard.active = true
@@ -95,10 +97,7 @@ lvim.plugins = {
 			vim.g.rnvimr_bw_enable = 1
 		end,
 	},
-	{
-		"sindrets/diffview.nvim",
-		event = "BufRead",
-	},
+	{ "sindrets/diffview.nvim" },
 	{
 		"vim-pandoc/vim-pandoc",
 		config = function()
