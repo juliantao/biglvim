@@ -96,6 +96,10 @@ lvim.plugins = {
 		end,
 	},
 	{
+		"sindrets/diffview.nvim",
+		event = "BufRead",
+	},
+	{
 		"vim-pandoc/vim-pandoc",
 		config = function()
 			vim.g["pandoc#modules#disabled"] = { "folding" }
