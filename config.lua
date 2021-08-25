@@ -113,6 +113,7 @@ lvim.plugins = {
 		"vim-pandoc/vim-pandoc-syntax",
 		config = function()
 			vim.g["pandoc#syntax#codeblocks#embeds#langs"] = { "python", "r", "cpp", "bash=sh", "latex=tex" }
+			vim.g["pandoc#syntax#conceal#use"] = 0
 		end,
 	},
 	{
@@ -140,7 +141,12 @@ lvim.plugins = {
 			}
 		end,
 	},
-	{ "dhruvasagar/vim-table-mode" },
+	{
+		"dhruvasagar/vim-table-mode",
+		config = function()
+			vim.g.table_mode_corner = "|"
+		end,
+	},
 	{
 		"junegunn/vim-easy-align",
 		setup = function()
