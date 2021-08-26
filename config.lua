@@ -184,6 +184,9 @@ lvim.lang.json.formatters = { { exe = "prettier" } }
 -- Autocommands
 
 lvim.autocommands.custom_groups = {
+	{ "BufWinEnter", "*.qmd", "set filetype=rmd" },
+	{ "BufNewFile", "*.qmd", "set filetype=rmd" },
+	{ "BufRead", "*.qmd", "set filetype=rmd" },
 	{ "Filetype", "python", "map <buffer> <leader>bb :w<CR>:exec '!python3' shellescape(@%, 1)<CR>" },
 	{
 		"Filetype",
@@ -195,16 +198,7 @@ lvim.autocommands.custom_groups = {
 		"rmd,qmd,rmarkdown,markdown,md,ipynb",
 		"map <buffer> <leader>pp :w<CR>:exec '!quarto preview' shellescape(@%, 1)<CR>",
 	},
-	{
-		"BufNewFile,BufRead",
-		"*qmd",
-		"set ft=rmd",
-	},
-	{
-		"VimLeave",
-		"*.tex",
-		"!texclear.sh",
-	},
+	{ "VimLeave", "*.tex", "!texclear.sh" },
 }
 
 --Utilies
