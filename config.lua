@@ -34,6 +34,12 @@ lvim.plugins = {
 	{ "tpope/vim-repeat" },
 	{ "ray-x/lsp_signature.nvim" },
 	{
+		"lervag/wiki.vim",
+		config = function()
+			vim.g.wiki_root = "~/Dropbox (ASU)/wiki"
+		end,
+	},
+	{
 		"lervag/vimtex",
 		config = function()
 			vim.g.vimtex_view_method = "zathura"
@@ -184,9 +190,8 @@ lvim.lang.json.formatters = { { exe = "prettier" } }
 -- Autocommands
 
 lvim.autocommands.custom_groups = {
-	{ "BufWinEnter", "*.qmd", "set filetype=rmd" },
-	{ "BufNewFile", "*.qmd", "set filetype=rmd" },
-	{ "BufRead", "*.qmd", "set filetype=rmd" },
+	{ "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=rmd" },
+	{ "BufWinEnter,BufNewFile,BufRead", "*.wiki", "set ft=pandoc" },
 	{ "Filetype", "python", "map <buffer> <leader>bb :w<CR>:exec '!python3' shellescape(@%, 1)<CR>" },
 	{
 		"Filetype",
