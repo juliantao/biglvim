@@ -32,4 +32,5 @@ function! ZoteroCite()
   return ref
 endfunction
 
+source ~/.cache/calendar.vim/credentials.vim
 " vim:fdm=marker

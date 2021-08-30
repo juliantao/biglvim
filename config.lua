@@ -34,9 +34,30 @@ lvim.plugins = {
 	{ "tpope/vim-repeat" },
 	{ "ray-x/lsp_signature.nvim" },
 	{
-		"lervag/wiki.vim",
+		"vimwiki/vimwiki",
+		branch = "dev",
 		config = function()
-			vim.g.wiki_root = "~/Dropbox (ASU)/wiki"
+			vim.g.vimwiki_list = {
+				{
+					path = "~/Dropbox (ASU)/wiki",
+					syntax = "markdown",
+					diary_header = "Journal",
+					auto_diary_index = 1,
+					auto_generate_links = 1,
+					auto_generate_tags = 1,
+					ext = ".rmd",
+				},
+			}
+			vim.g.vimwiki_commentstring = "<!--%s-->"
+			vim.g.vimwiki_folding = ""
+		end,
+	},
+	{ "tools-life/taskwiki" },
+	{
+		"itchyny/calendar.vim",
+		config = function()
+			vim.g.calendar_google_calendar = 1
+			vim.g.calendar_google_task = 1
 		end,
 	},
 	{
