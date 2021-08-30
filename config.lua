@@ -52,7 +52,7 @@ lvim.plugins = {
 			vim.g.vimwiki_folding = ""
 		end,
 	},
-	{ "tools-life/taskwiki" },
+	-- { "tools-life/taskwiki" },
 	{
 		"itchyny/calendar.vim",
 		config = function()
