@@ -49,10 +49,18 @@ lvim.plugins = {
 				},
 			}
 			vim.g.vimwiki_commentstring = "<!--%s-->"
-			vim.g.vimwiki_folding = ""
+			vim.g.vimwiki_folding = "custom"
+			vim.g.vimwiki_markdown_link_ext = 1
 		end,
 	},
-	-- { "tools-life/taskwiki" },
+	{
+		"tools-life/taskwiki",
+		config = function()
+			vim.g.taskwiki_dont_preserve_folds = "yes"
+			vim.g.taskwiki_disable_concealcursor = "yes"
+			vim.g.taskwiki_maplocalleader = ",t"
+		end,
+	},
 	{
 		"itchyny/calendar.vim",
 		config = function()
