@@ -3,6 +3,7 @@ lvim.format_on_save = true
 lvim.lint_on_save = true
 lvim.colorscheme = "gruvbox-material"
 vim.opt.relativenumber = true
+vim.api.nvim_command("set nofoldenable")
 
 -- Keymappings
 lvim.leader = "space"
@@ -51,12 +52,18 @@ lvim.plugins = {
 			vim.g.vimwiki_commentstring = "<!--%s-->"
 			vim.g.vimwiki_folding = "custom"
 			vim.g.vimwiki_markdown_link_ext = 1
+			-- vim.g.vimwiki_filetypes = { "rmd" }
+			-- vim.api.nvim_set_keymap("n", "<leader>wl", "<Plug>VimwikiFollowLink", { noremap = false, silent = true })
+			-- vim.api.nvim_set_keymap("n", "<leader>wj", "<Plug>VimwikiNextLink", { noremap = false, silent = true })
+			-- vim.api.nvim_set_keymap("n", "<leader>wk", "<Plug>VimwikiPrevLink", { noremap = false, silent = true })
+			-- vim.api.nvim_set_keymap("i", "<leader>wk", "<Plug>VimwikiTableNextCell", { noremap = false, silent = true })
 		end,
 	},
 	{
 		"tools-life/taskwiki",
 		config = function()
-			vim.g.taskwiki_dont_preserve_folds = "yes"
+			-- vim.g.taskwiki_disable = true
+			-- vim.g.taskwiki_dont_preserve_folds = "yes"
 			vim.g.taskwiki_disable_concealcursor = "yes"
 			vim.g.taskwiki_maplocalleader = ",t"
 		end,
@@ -158,24 +165,26 @@ lvim.plugins = {
 			vim.g.Rout_more_colors = 1
 			vim.g.R_set_omnifunc = {}
 			vim.g.R_auto_omni = {}
+			vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
 		end,
 	},
-	{
-		"dkarter/bullets.vim",
-		config = function()
-			vim.g.bullets_mapping_leader = "<SPACE>"
-			vim.g.bullets_enabled_file_types = {
-				"markdown",
-				"rmarkdown",
-				"rmd",
-				"pandoc",
-				"vimwiki",
-				"text",
-				"gitcommit",
-				"scratch",
-			}
-		end,
-	},
+	-- {
+	-- 	"dkarter/bullets.vim",
+	-- 	config = function()
+	-- 		vim.g.bullets_mapping_leader = "<SPACE>"
+	-- 		vim.g.bullets_enabled_file_types = {
+	-- 			"markdown",
+	-- 			"rmarkdown",
+	-- 			"rmd",
+	-- 			"pandoc",
+	-- 			"vimwiki",
+	-- 			"text",
+	-- 			"gitcommit",
+	-- 			"scratch",
+	-- 		}
+	-- 	end,
+	-- },
 	{
 		"dhruvasagar/vim-table-mode",
 		config = function()
@@ -224,12 +233,12 @@ lvim.autocommands.custom_groups = {
 	{ "Filetype", "python", "map <buffer> <leader>bb :w<CR>:exec '!python3' shellescape(@%, 1)<CR>" },
 	{
 		"Filetype",
-		"rmd,qmd,rmarkdown,markdown,md,ipynb",
+		"rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
 		"map <buffer> <leader>bb :w<CR>:exec '!quarto render' shellescape(@%, 1)<CR>",
 	},
 	{
 		"Filetype",
-		"rmd,qmd,rmarkdown,markdown,md,ipynb",
+		"rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
 		"map <buffer> <leader>pp :w<CR>:exec '!quarto preview' shellescape(@%, 1)<CR>",
 	},
 	{ "VimLeave", "*.tex", "!texclear.sh" },
