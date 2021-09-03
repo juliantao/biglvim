@@ -169,22 +169,22 @@ lvim.plugins = {
 			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
 		end,
 	},
-	-- {
-	-- 	"dkarter/bullets.vim",
-	-- 	config = function()
-	-- 		vim.g.bullets_mapping_leader = "<SPACE>"
-	-- 		vim.g.bullets_enabled_file_types = {
-	-- 			"markdown",
-	-- 			"rmarkdown",
-	-- 			"rmd",
-	-- 			"pandoc",
-	-- 			"vimwiki",
-	-- 			"text",
-	-- 			"gitcommit",
-	-- 			"scratch",
-	-- 		}
-	-- 	end,
-	-- },
+	{
+		"dkarter/bullets.vim",
+		config = function()
+			vim.g.bullets_mapping_leader = "<SPACE>"
+			vim.g.bullets_enabled_file_types = {
+				"markdown",
+				"rmarkdown",
+				"rmd",
+				"pandoc",
+				"vimwiki",
+				"text",
+				"gitcommit",
+				"scratch",
+			}
+		end,
+	},
 	{
 		"dhruvasagar/vim-table-mode",
 		config = function()
