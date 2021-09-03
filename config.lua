@@ -52,11 +52,8 @@ lvim.plugins = {
 			vim.g.vimwiki_commentstring = "<!--%s-->"
 			vim.g.vimwiki_folding = "custom"
 			vim.g.vimwiki_markdown_link_ext = 1
-			-- vim.g.vimwiki_filetypes = { "rmd" }
-			-- vim.api.nvim_set_keymap("n", "<leader>wl", "<Plug>VimwikiFollowLink", { noremap = false, silent = true })
-			-- vim.api.nvim_set_keymap("n", "<leader>wj", "<Plug>VimwikiNextLink", { noremap = false, silent = true })
-			-- vim.api.nvim_set_keymap("n", "<leader>wk", "<Plug>VimwikiPrevLink", { noremap = false, silent = true })
-			-- vim.api.nvim_set_keymap("i", "<leader>wk", "<Plug>VimwikiTableNextCell", { noremap = false, silent = true })
+			vim.g.vimwiki_filetypes = { "rmd" }
+			vim.g.vimwiki_key_mappings = { table_mappings = 0, lists_return = 0 }
 		end,
 	},
 	{
@@ -165,8 +162,8 @@ lvim.plugins = {
 			vim.g.Rout_more_colors = 1
 			vim.g.R_set_omnifunc = {}
 			vim.g.R_auto_omni = {}
-			vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
-			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+			-- vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+			-- vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
 		end,
 	},
 	{
@@ -241,6 +238,7 @@ lvim.autocommands.custom_groups = {
 		"rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
 		"map <buffer> <leader>pp :w<CR>:exec '!quarto preview' shellescape(@%, 1)<CR>",
 	},
+	-- { "Filetype", "vimwiki", "nunmap <buffer> <CR>" },
 	{ "VimLeave", "*.tex", "!texclear.sh" },
 }
 
