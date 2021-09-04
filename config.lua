@@ -50,7 +50,7 @@ lvim.plugins = {
 				},
 			}
 			vim.g.vimwiki_commentstring = "<!--%s-->"
-			vim.g.vimwiki_folding = "custom"
+			vim.g.vimwiki_folding = ""
 			vim.g.vimwiki_markdown_link_ext = 1
 			vim.g.vimwiki_filetypes = { "rmd" }
 			vim.g.vimwiki_key_mappings = { table_mappings = 0, lists_return = 0 }
@@ -60,7 +60,7 @@ lvim.plugins = {
 		"tools-life/taskwiki",
 		config = function()
 			-- vim.g.taskwiki_disable = true
-			-- vim.g.taskwiki_dont_preserve_folds = "yes"
+			vim.g.taskwiki_dont_preserve_folds = "yes"
 			vim.g.taskwiki_disable_concealcursor = "yes"
 			vim.g.taskwiki_maplocalleader = ",t"
 		end,
