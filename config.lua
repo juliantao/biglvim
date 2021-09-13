@@ -196,6 +196,12 @@ lvim.plugins = {
 		keys = "<Plug>(EasyAlign)",
 	},
 	{
+		"glacambre/firenvim",
+		run = function()
+			vim.fn["firenvim#install"](0)
+		end,
+	},
+	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
 			require("colorizer").setup({ "*" }, {
