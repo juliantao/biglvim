@@ -52,7 +52,7 @@ lvim.plugins = {
 			vim.g.vimwiki_commentstring = "<!--%s-->"
 			vim.g.vimwiki_folding = ""
 			vim.g.vimwiki_markdown_link_ext = 1
-			vim.g.vimwiki_filetypes = { "rmd" }
+			vim.g.vimwiki_filetypes = { "Rmd", "pandoc" }
 			vim.g.vimwiki_key_mappings = { table_mappings = 0, lists_return = 0 }
 		end,
 	},
@@ -231,17 +231,17 @@ lvim.lang.json.formatters = { { exe = "prettier" } }
 -- Autocommands
 
 lvim.autocommands.custom_groups = {
-	{ "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=rmd" },
+	{ "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=Rmd" },
 	{ "BufWinEnter,BufNewFile,BufRead", "*.wiki", "set ft=pandoc" },
 	{ "Filetype", "python", "map <buffer> <leader>bb :w<CR>:exec '!python3' shellescape(@%, 1)<CR>" },
 	{
 		"Filetype",
-		"rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
+		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
 		"map <buffer> <leader>bb :w<CR>:exec '!quarto render' shellescape(@%, 1)<CR>",
 	},
 	{
 		"Filetype",
-		"rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
+		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
 		"map <buffer> <leader>pp :w<CR>:exec '!quarto preview' shellescape(@%, 1)<CR>",
 	},
 	-- { "Filetype", "vimwiki", "nunmap <buffer> <CR>" },
