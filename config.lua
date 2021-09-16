@@ -215,6 +215,7 @@ lvim.plugins = {
 			})
 		end,
 	},
+	{ "sirtaj/vim-openscad" },
 }
 
 -- treesitter
