@@ -1,5 +1,7 @@
 -- General
 lvim.format_on_save = true
+lvim.lsp.diagnostics.virtual_text = false
+lvim.log.level = "warn"
 lvim.lint_on_save = true
 lvim.colorscheme = "gruvbox-material"
 vim.opt.relativenumber = true
@@ -52,7 +54,7 @@ lvim.plugins = {
 			vim.g.vimwiki_commentstring = "<!--%s-->"
 			vim.g.vimwiki_folding = ""
 			vim.g.vimwiki_markdown_link_ext = 1
-			vim.g.vimwiki_filetypes = { "Rmd", "pandoc" }
+			vim.g.vimwiki_filetypes = { "rmd" }
 			vim.g.vimwiki_key_mappings = { table_mappings = 0, lists_return = 0 }
 		end,
 	},
@@ -152,7 +154,7 @@ lvim.plugins = {
 		"vim-pandoc/vim-pandoc-syntax",
 		config = function()
 			vim.g["pandoc#syntax#codeblocks#embeds#langs"] = { "python", "r", "cpp", "bash=sh", "latex=tex" }
-			vim.g["pandoc#syntax#conceal#use"] = 0
+			vim.g["pandoc#syntax#conceal#use"] = 1
 		end,
 	},
 	{
@@ -224,7 +226,9 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- LSP
 lvim.lang.python.formatters = { { exe = "black" } }
-lvim.lang.python.linters = { { exe = "flake8" } }
+lvim.lang.python.linters = {
+	{ exe = "flake8", args = { "--ignore", "E501, E266, E265" } },
+}
 lvim.lang.lua.formatters = { { exe = "stylua" } }
 lvim.lang.json.formatters = { { exe = "prettier" } }
 
