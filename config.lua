@@ -236,7 +236,7 @@ lvim.lang.json.formatters = { { exe = "prettier" } }
 -- Autocommands
 
 lvim.autocommands.custom_groups = {
-	{ "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=Rmd" },
+	{ "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=rmd" },
 	{ "BufWinEnter,BufNewFile,BufRead", "*.wiki", "set ft=pandoc" },
 	{ "Filetype", "python", "map <buffer> <leader>bb :w<CR>:exec '!python3' shellescape(@%, 1)<CR>" },
 	{
