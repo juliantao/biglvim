@@ -154,7 +154,7 @@ lvim.plugins = {
 		"vim-pandoc/vim-pandoc-syntax",
 		config = function()
 			vim.g["pandoc#syntax#codeblocks#embeds#langs"] = { "python", "r", "cpp", "bash=sh", "latex=tex" }
-			vim.g["pandoc#syntax#conceal#use"] = 1
+			vim.g["pandoc#syntax#conceal#use"] = 0
 		end,
 	},
 	{
@@ -232,7 +232,7 @@ lvim.lang.python.linters = {
 }
 lvim.lang.lua.formatters = { { exe = "stylua" } }
 lvim.lang.json.formatters = { { exe = "prettier" } }
-
+require("lspconfig").r_language_server.setup({})
 -- Autocommands
 
 lvim.autocommands.custom_groups = {
