@@ -1,0 +1,146 @@
+{
+"iframe": {
+    "prefix": ["iframe"],
+    "body": [
+      "::: {#fig-${1:cap}}",
+      "",
+      "${2:paste embed info}",
+      "",
+      "${3:Caption}",
+      ":::"
+    ]
+  },
+  "fig3": {
+    "prefix": ["fig3"],
+    "body": [
+      "::: {#fig-${1:label} layout=\"[[1, 1], [1]]\"}",
+      "",
+      "![${2:subcap1}](${3:figure}){#fig-$2}",
+      "",
+      "![${4:subcap1}](${5:figure}){#fig-$4}",
+      "",
+      "![${6:subcap1}](${7:figure}){#fig-$6}",
+      "",
+      "${8:caption}",
+      "::::"
+    ]
+  },
+  "fig2": {
+    "prefix": ["fig2"],
+    "body": [
+      "::: {#fig-${1:label} layout=\"[1,1]\"}",
+      "",
+      "![${2:subcap1}](${3:figure}){#fig-$2}",
+      "",
+      "![${4:subcap1}](${5:figure}){#fig-$4}",
+      "",
+      "${6:caption}",
+      "::::"
+    ]
+  },
+  "eq": {
+    "prefix": ["eq"],
+    "body": [
+      "\\$\\$",
+      "$1",
+      "\\$\\$ {#eq-${2: label}}"
+    ]
+  },
+
+  "pyfig2": {
+    "prefix": ["pyfig2"],
+    "body": [
+      "```{python} ",
+      "#| label: fig-$1",
+      "#| fig-cap: \"$2\"",
+      "#| fig-subcap: ",
+      "#|    - \"$3\"",
+      "#|    - \"$4\"",
+      "#| layout-ncol: 2",
+      "",
+      "import numpy as np",
+      "import matplotlib.pyplot as plt",
+      "plt.style.use(['science', 'ieee'])",
+      "$5",
+      "plt.legend()",
+      "plt.show()",
+      "",
+      "$6",
+      "plt.legend()",
+      "plt.show()",
+      "```"
+    ]
+  },
+  "pyfig1": {
+    "prefix": ["pyfig1"],
+    "body": [
+      "```{python}",
+      "#| label: fig-$1",
+      "#| fig-cap: \"$2\"",
+      "",
+      "import numpy as np",
+      "import matplotlib.pyplot as plt",
+      "",
+      "plt.style.use(['science', 'ieee'])",
+      "$3",
+      "plt.show()",
+      "```"
+    ]
+  },
+
+  "div": {
+    "prefix": ["div"],
+    "body": [
+      "::: {#$1}",
+      "$2",
+      ":::"
+    ]
+  },
+
+  "figref": {
+    "prefix": ["figref"],
+    "body": [
+      "@fig-$1"
+    ]
+  },
+
+  "tblref": {
+    "prefix": ["tblref"],
+    "body": [
+      "@tbl-$1"
+    ]
+  },
+  "eqnref": {
+    "prefix": ["eqnref"],
+    "body": [
+      "@eq-$1"
+    ]
+  },
+
+  "secref": {
+    "prefix": ["secref"],
+    "body": [
+      "@sec-$1"
+    ]
+  },
+
+  "crossref": {
+    "prefix": ["crossref"],
+    "body": [
+      "crossref:",
+      "  fig-title: Figure",
+      "  tbl-title: Table",
+      "  title-delim: .",
+      "  fig-prefix: Figure",
+      "  tbl-prefix: Table",
+      "  eq-prefix: Eq."
+    ]
+  },
+
+  "fig": {
+    "prefix": ["fig"],
+    "body": [
+      "![${1:cap1}](${1:figure}){#fig-$1}"
+    ]
+  }
+}

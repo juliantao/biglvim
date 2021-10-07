@@ -1,0 +1,862 @@
+{
+  "Citation style": {
+    "body": "csl: <++>.csl",
+    "description": "Insert Citation Style",
+    "prefix": "citestyle"
+  },
+  "Color text in HTML": {
+    "body": "<span style=\"color: ${1:color};\">${2:text}</span>",
+    "description": "Add colored text in HTML",
+    "prefix": "colorhtml"
+  },
+  "Color text in PDF": {
+    "body": "\textcolor{${1:color}}{${2:text}}",
+    "description": "Add colored text in PDF",
+    "prefix": "colorpdf"
+  },
+  "Cross-reference equation": {
+    "body": "\\@ref(eq:${1:<++>})",
+    "description": "Cross reference an equation, like (Eq. X).",
+    "prefix": "refeq"
+  },
+  "Cross-reference figure": {
+    "body": "\\@ref(fig:${1:<++>})",
+    "description": "Cross reference a figure, like (Figure X).",
+    "prefix": "reffig"
+  },
+  "Cross-reference table": {
+    "body": "\\@ref(tab:${1:<++>})",
+    "description": "Cross reference a table, like (Table X).",
+    "prefix": "reftab"
+  },
+  "DiagrammeR": {
+    "body": [
+      "```{r}",
+      "#| label: fig-diagram",
+      "#| fig-cap: ${7:\"A diagram\"}",
+      "library(DiagrammeR)",
+      "DiagrammeR::grViz(\"digraph {",
+      "graph [layout = dot, rankdir = ${5:TB}]",
+      "node [shape = rectangle]",
+      "rec1 [label = '${1: Step 1}']",
+      "rec2 [label = '${2: Step 2}']",
+      "rec3 [label = '${3: Step 3}']",
+      "rec4 [label = '${4: Step 4}']",
+      "# edge definitions with the node IDs",
+      "rec1 -> rec2 -> rec3 -> rec4",
+      "}\",",
+      "height = ${6: 500})",
+      "```"
+    ],
+    "description": "Add a diagram",
+    "prefix": "diagram"
+  },
+
+  "Equation caption": {
+    "body": "\\#eq:${1:<++>}",
+    "description": "Add equation cap",
+    "prefix": "eqcap"
+  },
+  "Extra dependencies": {
+    "body": ["extra_dependencies: [\"\\${1: package1}\",\"\\${2: package2}\"]"],
+    "prefix": ["extradep"]
+  },
+  "Figure": {
+    "body": [
+      "```{r ${1:<++>}, fig.cap = \"${3: <++>}\"}",
+      "knitr::include_graphics('figure/${2: <++>}')",
+      "```"
+    ],
+    "description": "Add a figure",
+    "prefix": "addfig"
+  },
+  "Figure with external caption": {
+    "body": [
+      "(ref:${1:<++>}) {3: <++>}",
+      "",
+      "```{r ${1:<++>}, fig.cap = (ref:${1:<++>})}",
+      "knitr::include_graphics('figure/${2:file}')",
+      "```"
+    ],
+    "description": "Add a figure with an external caption (for things like Markdown or citations in captions).",
+    "prefix": "addfig_extcap"
+  },
+  "Horizontal Line": {
+    "body": "------",
+    "description": "Add a horizontal line",
+    "prefix": "addline"
+  },
+  "Include appendix after bibliography": {
+    "body": "<div id=\"refs\"></div>",
+    "description": "Include appendix after bibliography",
+    "prefix": "appendix after bib"
+  },
+  "Insert Python code chunk": {
+    "body": ["```{python}", "$0", "```"],
+    "description": "Insert R code chunk",
+    "prefix": "pycode"
+  },
+  "Insert R code chunk": {
+    "body": ["```{r}", "$0", "```"],
+    "description": "Insert R code chunk",
+    "prefix": "rcode"
+  },
+  "Insert bibliography": {
+    "body": ["bibliography: references.bib"],
+    "description": "Add bibliography",
+    "prefix": "bib"
+  },
+  "Insert bold text": {
+    "body": "**${1:${TM_SELECTED_TEXT}}**$0",
+    "description": "Insert bold text",
+    "prefix": "bold"
+  },
+  "Insert code": {
+    "body": "`${1:${TM_SELECTED_TEXT}}`$0",
+    "description": "Insert code",
+    "prefix": "code"
+  },
+  "Insert code chunk": {
+    "body": ["```{${1:language}}", "$0", "```"],
+    "description": "Insert code chunk",
+    "prefix": "chunk"
+  },
+  "Insert fenced code block": {
+    "body": ["```${1:language}", "$0", "```"],
+    "description": "Insert fenced code block",
+    "prefix": "fenced"
+  },
+  "Insert heading": {
+    "body": "# ${1:text}",
+    "description": "Insert heading",
+    "prefix": "h1"
+  },
+  "Insert horizontal rule": {
+    "body": "----------\n",
+    "description": "Insert horizontal rule",
+    "prefix": "rule"
+  },
+  "Insert image": {
+    "body": "![${1:alt}](${2:link})$0",
+    "description": "Insert image",
+    "prefix": "image"
+  },
+  "Insert italic text": {
+    "body": "*${1:${TM_SELECTED_TEXT}}*$0",
+    "description": "Insert italic text",
+    "prefix": "italic"
+  },
+  "Insert link": {
+    "body": "[${1:text}](http://${2:link})$0",
+    "description": "Insert link",
+    "prefix": "link"
+  },
+  "Insert ordered list": {
+    "body": ["1. ${1:first}", "2. ${2:second}", "3. ${3:third}", "$0"],
+    "description": "Insert ordered list",
+    "prefix": "ordered"
+  },
+  "Insert quoted text": {
+    "body": "> ${1:${TM_SELECTED_TEXT}}",
+    "description": "Insert quoted text",
+    "prefix": "quote"
+  },
+  "Insert unordered list": {
+    "body": ["- ${1:first}", "- ${2:second}", "- ${3:third}", "$0"],
+    "description": "Insert unordered list",
+    "prefix": "unordered"
+  },
+  "Linear model": {
+    "body": [
+      "lmObj <- lm(${1:yCol} ~ {2:xCol}, data = ${3:data}, subset = ${4:subset}, weights = ${5:weights}, na.action = ${6:na.action})",
+      "summary(lmObj)"
+    ],
+    "description": "Fit a linear model",
+    "prefix": "lm"
+  },
+  "Linear model with plot": {
+    "body": [
+      "lmObj <- lm(${1:yCol} ~ {2:xCol}, data = ${3:data}, subset = ${4:subset}, weights = ${5:weights}, na.action = ${6:na.action})",
+      "summary(lmObj)",
+      "plot(lmObj, which=c(1)) # Plot residuals versus fitted"
+    ],
+    "description": "Fit a linear model and create a plot",
+    "prefix": "lmplot"
+  },
+  "Read CSV": {
+    "body": "${1:dfname} <- read.csv(file = \"${2:file}\", header = ${3|TRUE,FALSE|},  sep = \"${4|\\,,;|}\", row.names = ${5:NULL},  stringsAsFactors = ${6|FALSE,TRUE|})",
+    "description": "Read a data table from a comma-separated file (CSV) and create a data frame",
+    "prefix": "readcsv"
+  },
+  "Region End": {
+    "body": ["#endregion"],
+    "description": "Folding Region End",
+    "prefix": "#endregion"
+  },
+  "Region Start": {
+    "body": ["#region $0"],
+    "description": "Folding Region Start",
+    "prefix": "#region"
+  },
+  "Source R": {
+    "body": ["```{r, code=xfun::read_utf8('${1:script.R}')}", "```"],
+    "prefix": ["sourcer"]
+  },
+  "SourcePy": {
+    "body": ["```{python, code=xfun::read_utf8('${1:script.py}')}", "```"],
+    "prefix": ["sourcepy"]
+  },
+  "Sys date": {
+    "body": "\"`r Sys.Date()`\"",
+    "description": "Insert System Date",
+    "prefix": "sysdate"
+  },
+  "TK": {
+    "body": "_(**TKTK** - blah blah blah)_",
+    "description": "Add a note to yourself.",
+    "prefix": "tktk"
+  },
+  "TK (citation needed)": {
+    "body": "_(**TKTK** - citation needed)_",
+    "description": "Add a note to yourself to cite this later.",
+    "prefix": "tkcite"
+  },
+  "Table from CSV": {
+    "body": [
+      "```{r ${1:<++>}, eval = TRUE, echo = FALSE, message = FALSE, results = 'asis'}",
+      "knitr::kable(",
+      "\tread_csv('data/${2:<++>}'),",
+      "\tbooktabs = TRUE,",
+      "\tcaption = \"${3: <++>}\")",
+      "```"
+    ],
+    "description": "Add a table from a CSV file using Kable.",
+    "prefix": "addtab_csv"
+  },
+  "Unnumber a section": {
+    "body": "{-}",
+    "description": "put this to the end of line and unnumber a section",
+    "prefix": "unnumber"
+  },
+  "Wrap Figure": {
+    "body": [
+      "\\begin{wrapfigure}{r}{${1:.2}\\textwidth}",
+      "    \\centering",
+      "    \\includegraphics[width=${1:.2}\\textwidth]{${2:figure}}  ",
+      "    \\caption{${3:caption}} ",
+      "    \\label{fig:${4:caption}} ",
+      "\\end{wrapfigure}"
+    ],
+    "prefix": "wrapfig"
+  },
+  "cat": {
+    "body": "cat(${1:file}, ${2:sep = ${3:\"\"}}, ${4:fill = ${5:FALSE}}, ${6:labels = ${7:NULL}}, ${8:append = ${9:FALSE}})",
+    "description": "Cat",
+    "prefix": "cat"
+  },
+  "cum": {
+    "body": "cum${1:max}(${2:x})",
+    "description": "Cummulative",
+    "prefix": "cum"
+  },
+  "cuma": {
+    "body": "cummax(${1:x}",
+    "description": "Cummulative max",
+    "prefix": "cumaax"
+  },
+  "cumi": {
+    "body": "cummin(${1:x}",
+    "description": "Cummulative min",
+    "prefix": "cumin"
+  },
+  "cut": {
+    "body": "cut(${1:x}, breaks = c(${2:${3:}, ${4:max(${1:x})}}))",
+    "description": "Divide Into Intervals",
+    "prefix": "cut"
+  },
+  "daf": {
+    "body": "data.frame(${1:...}, ${2:row.names = ${3:NULL}}, ${4:check.rows = ${5:FALSE}}, ${6:check.names = ${7:TRUE}}, ${8:stringsAsFactors = ${9:default.stringsAsFactors()}})",
+    "description": "Data Frame",
+    "prefix": "data.frame"
+  },
+  "dat": {
+    "body": "data(${1:name})",
+    "description": "Load Dataset",
+    "prefix": "data"
+  },
+  "grep": {
+    "body": "grep(${1:pattern}, ${2:x}, ${3:ignore.case = ${4:FALSE}}, ${5:perl = ${6:FALSE}})",
+    "description": "Grep",
+    "prefix": "grep"
+  },
+  "grep2": {
+    "body": "grep(${1:pattern}, ${2:x}, ${3:ignore.case = ${4:FALSE}}, ${5:perl = ${6:FALSE}}, ${7:value = ${8:FALSE}}, ${9:fixed = ${10:TRUE}})",
+    "description": "Grep",
+    "prefix": "grep"
+  },
+  "grepl": {
+    "body": "grep(${1:pattern}, ${2:x}, ${3:ignore.case = ${4:FALSE}}, ${5:perl = ${6:FALSE}}, ${7:fixed = ${8:TRUE}})",
+    "description": "Grep logical",
+    "prefix": "grepl"
+  },
+  "h1": {
+    "body": "# ${1:text}",
+    "description": "Insert heading",
+    "prefix": "h1"
+  },
+  "h2": {
+    "body": "## ${1:text}",
+    "description": "Insert heading 2",
+    "prefix": "h2"
+  },
+  "h3": {
+    "body": "### ${1:text}",
+    "description": "Insert heading 3",
+    "prefix": "h3"
+  },
+  "pas": {
+    "body": "paste(${1:...}, ${2:sep = ${3:\" \"}}, ${3:collapse = ${4:NULL}})",
+    "description": "Paste",
+    "prefix": "paste"
+  },
+  "pas0": {
+    "body": "paste(${1:...}, ${2:collapse = ${3:NULL}})",
+    "description": "Paste0",
+    "prefix": "pas0"
+  },
+  "plot": {
+    "body": "plot(${1:x}, ${2:y}, ${3:...})",
+    "description": "Plot",
+    "prefix": "plot"
+  },
+  "poi": {
+    "body": "points(${1:x}, ${2:y = ${3:NULL}}, ${4:type = ${5:\"p\"}}, ${6:...})",
+    "description": "Points",
+    "prefix": "point"
+  },
+  "pri": {
+    "body": "print(${1:x}, ${2:...})",
+    "description": "Print",
+    "prefix": "print"
+  },
+  "qua": {
+    "body": "quantile(${1:x}, ${2:probs = ${3:seq(0, 1, 0.25)}}, ${4:na.rm = ${5:FALSE}}, ${6:names = ${7:TRUE}}, ${8:type = ${9:7}}, ${10:...})",
+    "description": "Quantile",
+    "prefix": "quantile"
+  },
+  "reat": {
+    "body": "read.table('${1:filename}'${2:, header = ${3:TRUE},  sep = '${4:\t}',  stringsAsFactors = ${5:FALSE}})",
+    "description": "Read From File",
+    "prefix": "read"
+  },
+  "rep": {
+    "body": "rep(${1:x}, ${2:...})",
+    "description": "Rep",
+    "prefix": "rep"
+  },
+  "rug": {
+    "body": "rug(${1:jitter(${2:x})})",
+    "descriptison": "Add Tick Marks",
+    "prefix": "rug"
+  },
+  "sd": {
+    "body": "sd(${1:x}${2:, na.rm=${3:FALSE}})",
+    "description": "Standard deviation",
+    "prefix": "sd"
+  },
+  "sor": {
+    "body": "sort(${1:x})",
+    "description": "Sort",
+    "prefix": "sort"
+  },
+  "sou": {
+    "body": "source(${1:'${2:}'}${3:, chdir = ${4:TRUE}})",
+    "description": "Source",
+    "prefix": "source"
+  },
+  "tab": {
+    "body": "table(${1:...})",
+    "description": "Table",
+    "prefix": "table"
+  },
+  "tap": {
+    "body": "tapply(${1:X}, ${2:INDEX}, ${3:FUN = ${4:NULL}}, ${5:...}, ${6:simplify = ${7:TRUE}})",
+    "description": "Tapply",
+    "prefix": "tapply"
+  },
+  "wric": {
+    "body": "write.csv(${1:x}, ${2:file = ${3:\"\"}}, ${4:append = ${5:FALSE}}, ${6:quote = ${7:TRUE}}, ${8:sep = ${9:\" \"}}",
+    "description": "Write csv",
+    "prefix": "write"
+  },
+  "[": {
+    "prefix": "[",
+    "body": ["[${1:label}](${2:location})", ""],
+    "description": "["
+  },
+  "![": {
+    "prefix": "![",
+    "body": ["![${1:label}](${2:location})", ""],
+    "description": "!["
+  },
+  "r": {
+    "prefix": "r",
+    "body": ["```{r ${1:label}, ${2:options}}", "${0}", "```", ""],
+    "description": "r"
+  },
+  "rcpp": {
+    "prefix": "rcpp",
+    "body": [
+      "```{r, engine='Rcpp'}",
+      "#include <Rcpp.h>",
+      "using namespace Rcpp;",
+      "",
+      "${0}",
+      ""
+    ],
+    "description": "rcpp"
+  },
+  "twe \"Blogdown Tweet Shortcode\"": {
+    "prefix": "twe \"Blogdown Tweet Shortcode\"",
+    "body": ["`r blogdown::shortcode(\"tweet\", \"${1:tweetid}\")`", ""],
+    "description": "twe \"Blogdown Tweet Shortcode\""
+  },
+  "css": {
+    "prefix": "css",
+    "body": ["```{css echo=FALSE}", "${1:css}", "```", ""],
+    "description": "css"
+  },
+  "js": {
+    "prefix": "js",
+    "body": ["```{js}", "${1:js}", "```", ""],
+    "description": "js"
+  },
+  "html:chunk": {
+    "prefix": "html:chunk",
+    "body": ["```{html ${1:label}, eval=${2:FALSE}}", "${0}", "```", ""],
+    "description": "html:chunk"
+  },
+  "pkg": {
+    "prefix": "pkg",
+    "body": ["[${1:package}]{.pkg}", ""],
+    "description": "pkg"
+  },
+  "!!": {
+    "prefix": "!!",
+    "body": [
+      "[$0](${1:url}){target=\"_blank\" rel=\"noopener noreferrer\"}",
+      ""
+    ],
+    "description": "!!"
+  },
+  "kbd": {
+    "prefix": "kbd",
+    "body": ["<kbd>${1:key}</kbd>", ""],
+    "description": "kbd"
+  },
+  "details": {
+    "prefix": "details",
+    "body": [
+      "<details><summary>${1:summary}</summary>",
+      "",
+      "${2:stuff}",
+      "</details>",
+      ""
+    ],
+    "description": "details"
+  },
+  "msss \"{{moustache}} section\"": {
+    "prefix": "msss \"{{moustache}} section\"",
+    "body": ["{{#$0}}", "{{$0}}", "{{/$0}}", ""],
+    "description": "msss \"{{moustache}} section\""
+  },
+  "html:basic": {
+    "prefix": "html:basic",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "  <head>",
+      "    <meta charset=\"utf-8\" />",
+      "    <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\" />",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />",
+      "",
+      "    <title>${1:title}</title>",
+      "  </head>",
+      "  <body>",
+      "    $0",
+      "  </body>",
+      "</html>"
+    ],
+    "description": "html:basic"
+  },
+  "div.": {
+    "prefix": "div.",
+    "body": ["<div class=\"$1\">$0</div>"],
+    "description": "div."
+  },
+  "divhtml": {
+    "prefix": "divhtml",
+    "body": ["<div>$0</div>"],
+    "description": "div"
+  },
+  "div#": {
+    "prefix": "div#",
+    "body": ["<div id=\"$1\"></div>"],
+    "description": "div#"
+  },
+  "span.": {
+    "prefix": "span.",
+    "body": ["<span class=\"$1\">$0</span>"],
+    "description": "span."
+  },
+  "span": {
+    "prefix": "span",
+    "body": ["<span>$0</span>"],
+    "description": "span"
+  },
+  "span#": {
+    "prefix": "span#",
+    "body": ["<span id=\"$1\"></span>", "", ""],
+    "description": "span#"
+  },
+  "flex": {
+    "prefix": "flex",
+    "body": [
+      ".flex${1:.flex-wrap}[",
+      ".w-${2:50}[",
+      "$0",
+      "]",
+      "",
+      ".w-${3:50}[",
+      "",
+      "]",
+      "]"
+    ],
+    "description": "flex"
+  },
+  ".w": {
+    "prefix": ".w",
+    "body": [".w-${1:50}[", "$0", "]", ""],
+    "description": ".w"
+  },
+  "bg": {
+    "prefix": "bg",
+    "body": [
+      "background-url: url($0)",
+      "background-size: ${1:cover}",
+      "background-position: ${2:center center}",
+      "background-repeat: ${3:no-repeat}",
+      ""
+    ],
+    "description": "bg"
+  },
+  "lt": {
+    "prefix": "lt",
+    "body": ["layout: ${1:true}"],
+    "description": "lt"
+  },
+  "lf": {
+    "prefix": "lf",
+    "body": ["layout: ${2:false}"],
+    "description": "lf"
+  },
+  "cl": {
+    "prefix": "cl",
+    "body": ["class: ${0}"],
+    "description": "cl"
+  },
+  "clhbg": {
+    "prefix": "clhbg",
+    "body": ["class: ${1:header_background}${2}", "", "# $0"],
+    "description": "clhbg"
+  },
+  "slide": {
+    "prefix": "slide",
+    "body": ["---", "layout: ${1:false}", "class: ${2:class}", "", "# $0", ""],
+    "description": "slide"
+  },
+  "lrcol": {
+    "prefix": "lrcol",
+    "body": [".left-column[", "$1", "]", ".right-column[", "$0", "]", ""],
+    "description": "lrcol"
+  },
+  "ps": {
+    "prefix": "ps",
+    "body": [".panelset[", "$0", "]"],
+    "description": "ps"
+  },
+  "panel": {
+    "prefix": "panel",
+    "body": [".panel[.panel-name[${1:Panel Title}]", "$0", "]", ""],
+    "description": "panel"
+  },
+  "lrn:setup": {
+    "prefix": "lrn:setup",
+    "body": [
+      "```{r setup, include=FALSE}",
+      "library(learnr)",
+      "tutorial_options($0)",
+      "```",
+      ""
+    ],
+    "description": "lrn:setup"
+  },
+  "lrnef": {
+    "prefix": "lrnef",
+    "body": [
+      "```{r $0-setup}",
+      "# exercise setup code",
+      "```",
+      "",
+      "```{r $0, exercise = TRUE}",
+      "# exercise code",
+      "```",
+      "",
+      "```{r $0-hint-1}",
+      "# hint code",
+      "```",
+      "",
+      "```{r $0-hint-2}",
+      "# hint code",
+      "```",
+      "",
+      "```{r $0-solution}",
+      "```",
+      "",
+      "```{r $0-check}",
+      "grade_result(",
+      "  pass_if(~ .result, \"Pass Message\"),",
+      "  fail_if(~ .result, \"Fail message\")",
+      ")",
+      "```",
+      ""
+    ],
+    "description": "lrnef"
+  },
+  "lrne": {
+    "prefix": "lrne",
+    "body": [
+      "```{r ${1:exercise-name}, exercise = TRUE}",
+      "${2:exercise_code}",
+      "```",
+      "",
+      "```{r ${1:exercise-name}-hint}",
+      "# hint code",
+      "```",
+      "",
+      "```{r ${1:exercise-name}-solution}",
+      "${2:exercise_code}",
+      "```",
+      "",
+      "```{r ${1:exercise-name}-check}",
+      "grade_code(correct = \"$0\")",
+      "```",
+      ""
+    ],
+    "description": "lrne"
+  },
+  "lrnq": {
+    "prefix": "lrnq",
+    "body": [
+      "```{r ${1:question-chunk-name}, echo=FALSE}",
+      "question(\"${2:question}\",",
+      "  answer(\"${3:answer_1}\", correct = TRUE),",
+      "  answer(\"${4:answer_2}\"),",
+      "  allow_retry = TRUE,",
+      "  random_answer_order = TRUE",
+      ")",
+      "```",
+      ""
+    ],
+    "description": "lrnq"
+  },
+  "lrnqz": {
+    "prefix": "lrnqz",
+    "body": [
+      "```{r ${1:question-chunk-name}, echo=FALSE}",
+      "quiz(",
+      "  caption = \"${2:caption}\",",
+      "  $0",
+      ")",
+      "```",
+      ""
+    ],
+    "description": "lrnqz"
+  },
+  "Insert table": {
+    "prefix": "table",
+    "body": [
+      "| ${1:Column1}  | ${2:Column2}   | ${3:Column3}   |",
+      "|-------------- | -------------- | -------------- |",
+      "| ${4:Item1}    | ${5:Item1}     | ${6:Item1}     |",
+      "${0}"
+    ],
+    "description": "Insert table with 2 rows and 3 columns. First row is heading."
+  },
+  "Insert 2x1 table": {
+    "prefix": "2x1table",
+    "body": [
+      "| ${1:Column1}  |",
+      "|-------------- |",
+      "| ${2:Item1}    |",
+      "${0}"
+    ],
+    "description": "Insert table with 2 rows and 1 column. First row is heading."
+  },
+  "Insert 3x1 table": {
+    "prefix": "3x1table",
+    "body": [
+      "| ${1:Column1}  |",
+      "|-------------- |",
+      "| ${2:Item1}    |",
+      "| ${3:Item2}    |",
+      "${0}"
+    ],
+    "description": "Insert table with 3 rows and 1 column. First row is heading."
+  },
+  "Insert 4x1 table": {
+    "prefix": "4x1table",
+    "body": [
+      "| ${1:Column1}  |",
+      "|-------------- |",
+      "| ${2:Item1}    |",
+      "| ${3:Item2}    |",
+      "| ${4:Item3}    |",
+      "${0}"
+    ],
+    "description": "Insert table with 4 rows and 1 column. First row is heading."
+  },
+  "Insert 5x1 table": {
+    "prefix": "5x1table",
+    "body": [
+      "| ${1:Column1}  |",
+      "|-------------- |",
+      "| ${2:Item1}    |",
+      "| ${3:Item2}    |",
+      "| ${4:Item3}    |",
+      "| ${5:Item4}    |",
+      "${0}"
+    ],
+    "description": "Insert table with 5 rows and 1 column. First row is heading."
+  },
+  "Insert 2x2 table": {
+    "prefix": "2x2table",
+    "body": [
+      "| ${1:Column1}   | ${2:Column2}    |",
+      "|--------------- | --------------- |",
+      "| ${3:Item1.1}   | ${4:Item2.1}   |",
+      "${0}"
+    ],
+    "description": "Insert table with 2 rows and 2 columns. First row is heading."
+  },
+  "Insert 3x2 table": {
+    "prefix": "3x2table",
+    "body": [
+      "| ${1:Column1}   | ${2:Column2}    |",
+      "|--------------- | --------------- |",
+      "| ${3:Item1.1}   | ${4:Item2.1}   |",
+      "| ${5:Item1.2}   | ${6:Item2.2}   |",
+      "${0}"
+    ],
+    "description": "Insert table with 3 rows and 2 columns. First row is heading."
+  },
+  "Insert 4x2 table": {
+    "prefix": "4x2table",
+    "body": [
+      "| ${1:Column1}   | ${2:Column2}    |",
+      "|--------------- | --------------- |",
+      "| ${3:Item1.1}   | ${4:Item2.1}   |",
+      "| ${5:Item1.2}   | ${6:Item2.2}   |",
+      "| ${7:Item1.3}   | ${8:Item2.3}   |",
+      "${0}"
+    ],
+    "description": "Insert table with 4 rows and 2 columns. First row is heading."
+  },
+  "Insert 5x2 table": {
+    "prefix": "5x2table",
+    "body": [
+      "| ${1:Column1}   | ${2:Column2}    |",
+      "|--------------- | --------------- |",
+      "| ${3:Item1.1}   | ${4:Item2.1}   |",
+      "| ${4:Item1.2}   | ${5:Item2.2}   |",
+      "| ${6:Item1.3}   | ${7:Item2.3}   |",
+      "| ${8:Item1.4}   | ${9:Item2.4}   |",
+      "${0}"
+    ],
+    "description": "Insert table with 5 rows and 2 columns. First row is heading."
+  },
+  "Insert 2x3 table": {
+    "prefix": "2x3table",
+    "body": [
+      "| ${1:Column1}    | ${2:Column2}    | ${3:Column3}    |",
+      "|---------------- | --------------- | --------------- |",
+      "| ${4:Item1.1}    | ${5:Item2.1}    | ${6:Item3.1}    |",
+      "${0}"
+    ],
+    "description": "Insert table with 2 rows and 3 columns. First row is heading."
+  },
+  "Insert 3x3 table": {
+    "prefix": "3x3table",
+    "body": [
+      "| ${1:Column1}    | ${2:Column2}    | ${3:Column3}    |",
+      "|---------------- | --------------- | --------------- |",
+      "| ${4:Item1.1}    | ${5:Item2.1}    | ${6:Item3.1}    |",
+      "| ${7:Item1.2}    | ${8:Item2.2}    | ${9:Item3.2}    |",
+      "${0}"
+    ],
+    "description": "Insert table with 3 rows and 3 columns. First row is heading."
+  },
+  "Insert 4x3 table": {
+    "prefix": "4x3table",
+    "body": [
+      "| ${1:Column1}    | ${2:Column2}    | ${3:Column3}    |",
+      "|---------------- | --------------- | --------------- |",
+      "| ${4:Item1.1}    | ${5:Item2.1}    | ${6:Item3.1}    |",
+      "| ${7:Item1.2}    | ${8:Item2.2}    | ${9:Item3.2}    |",
+      "| ${10:Item1.3}   | ${11:Item2.3}   | ${12:Item3.3}   |",
+      "${0}"
+    ],
+    "description": "Insert table with 4 rows and 3 columns. First row is heading."
+  },
+  "Insert 5x3 table": {
+    "prefix": "5x3table",
+    "body": [
+      "| ${1:Column1}    | ${2:Column2}    | ${3:Column3}    |",
+      "|---------------- | --------------- | --------------- |",
+      "| ${4:Item1.1}    | ${5:Item2.1}    | ${6:Item3.1}    |",
+      "| ${7:Item1.2}    | ${8:Item2.2}    | ${9:Item3.2}    |",
+      "| ${10:Item1.3}   | ${11:Item2.3}   | ${12:Item3.3}   |",
+      "| ${13:Item1.4}   | ${14:Item2.4}   | ${15:Item3.4}   |",
+      "${0}"
+    ],
+    "description": "Insert table with 5 rows and 3 columns. First row is heading."
+  },
+  "background image": {
+    "prefix": ["bgimg"],
+    "body": [
+      "background-image: url(\"${1: ./imge/some}\")",
+      "background-position: ${2: right}",
+      "background-size: ${3: contain}"
+    ]
+  },
+
+  "pull left": {
+    "prefix": ["pullleft"],
+    "body": [".pull-left[", "$1", "]"]
+  },
+
+  "pull rigt": {
+    "prefix": ["pullright"],
+    "body": [".pull-right[", "$1", "]"]
+  },
+
+  "left column": {
+    "prefix": ["colleft"],
+    "body": [".left-column[", "$1", "]"]
+  },
+
+  "right column": {
+    "prefix": ["colright"],
+    "body": [".right-column[", "$1", "]"]
+  }
+}

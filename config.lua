@@ -236,7 +236,7 @@ require("lspconfig").r_language_server.setup({})
 
 -- Snippet
 
--- require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/snips" } })
+require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" } })
 
 -- Autocommands
 
