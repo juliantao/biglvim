@@ -233,6 +233,11 @@ lvim.lang.python.linters = {
 lvim.lang.lua.formatters = { { exe = "stylua" } }
 lvim.lang.json.formatters = { { exe = "prettier" } }
 require("lspconfig").r_language_server.setup({})
+
+-- Snippet
+
+-- require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/snips" } })
+
 -- Autocommands
 
 lvim.autocommands.custom_groups = {
