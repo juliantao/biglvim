@@ -32,7 +32,7 @@ function! ZoteroCite()
   return ref
 endfunction
 
-autocmd  BufWinEnter,BufNewFile,BufRead *.qmd set ft=rmd
+" autocmd  BufWinEnter,BufNewFile,BufRead *.qmd set ft=rmd
 
 source ~/.cache/calendar.vim/credentials.vim
 " vim:fdm=marker
