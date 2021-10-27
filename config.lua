@@ -12,6 +12,7 @@ lvim.leader = "space"
 vim.g.maplocalleader = ","
 lvim.keys.insert_mode["<C-l>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
 lvim.keys.normal_mode["<Localleader>mm"] = "i <++>"
+lvim.keys.normal_mode["<leader>ii"] = ":PasteImg<CR>"
 lvim.keys.normal_mode["<Localleader>,"] = "/<++><CR>c4l"
 lvim.keys.normal_mode["<localleader>z"] = '"=ZoteroCite()<CR>p'
 lvim.keys.insert_mode["<C-z>"] = "<C-r>=ZoteroCite()<CR>"
