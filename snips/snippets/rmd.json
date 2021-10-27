@@ -51,7 +51,6 @@
     "description": "Add a diagram",
     "prefix": "diagram"
   },
-
   "Equation caption": {
     "body": "\\#eq:${1:<++>}",
     "description": "Add equation cap",
@@ -831,30 +830,18 @@
     ],
     "description": "Insert table with 5 rows and 3 columns. First row is heading."
   },
-  "background image": {
-    "prefix": ["bgimg"],
-    "body": [
-      "background-image: url(\"${1: ./imge/some}\")",
-      "background-position: ${2: right}",
-      "background-size: ${3: contain}"
-    ]
-  },
-
   "pull left": {
     "prefix": ["pullleft"],
     "body": [".pull-left[", "$1", "]"]
   },
-
   "pull rigt": {
     "prefix": ["pullright"],
     "body": [".pull-right[", "$1", "]"]
   },
-
   "left column": {
     "prefix": ["colleft"],
     "body": [".left-column[", "$1", "]"]
   },
-
   "right column": {
     "prefix": ["colright"],
     "body": [".right-column[", "$1", "]"]

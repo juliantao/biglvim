@@ -1,5 +1,5 @@
 {
-"iframe": {
+  "iframe": {
     "prefix": ["iframe"],
     "body": [
       "::: {#fig-${1:cap}}",
@@ -40,13 +40,8 @@
   },
   "eq": {
     "prefix": ["eq"],
-    "body": [
-      "\\$\\$",
-      "$1",
-      "\\$\\$ {#eq-${2: label}}"
-    ]
+    "body": ["\\$\\$", "$1", "\\$\\$ {#eq-${2: label}}"]
   },
-
   "pyfig2": {
     "prefix": ["pyfig2"],
     "body": [
@@ -87,43 +82,26 @@
       "```"
     ]
   },
-
   "div": {
     "prefix": ["div"],
-    "body": [
-      "::: {#$1}",
-      "$2",
-      ":::"
-    ]
+    "body": ["::: {#$1}", "$2", ":::"]
   },
-
   "figref": {
     "prefix": ["figref"],
-    "body": [
-      "@fig-$1"
-    ]
+    "body": ["@fig-$1"]
   },
-
   "tblref": {
     "prefix": ["tblref"],
-    "body": [
-      "@tbl-$1"
-    ]
+    "body": ["@tbl-$1"]
   },
   "eqnref": {
     "prefix": ["eqnref"],
-    "body": [
-      "@eq-$1"
-    ]
+    "body": ["@eq-$1"]
   },
-
   "secref": {
     "prefix": ["secref"],
-    "body": [
-      "@sec-$1"
-    ]
+    "body": ["@sec-$1"]
   },
-
   "crossref": {
     "prefix": ["crossref"],
     "body": [
@@ -136,11 +114,42 @@
       "  eq-prefix: Eq."
     ]
   },
-
   "fig": {
     "prefix": ["fig"],
+    "body": ["![${1:cap1}](${1:figure}){#fig-$1}"]
+  },
+  "background image": {
+    "prefix": ["bgimg"],
     "body": [
-      "![${1:cap1}](${1:figure}){#fig-$1}"
+      "{background-image=\"${1: ./imge/some}\"  background-position=right  background-size=contain}"
     ]
+  },
+  "pl": {
+    "prefix": ["pl"],
+    "body": ["::: {.pull-left}", "$0", ":::"]
+  },
+  "pr": {
+    "prefix": ["pr"],
+    "body": ["::: {.pull-right}", "$0", ":::"]
+  },
+  "cl": {
+    "prefix": ["cl"],
+    "body": ["::: {.left-column}", "$0", ":::"]
+  },
+  "cr": {
+    "prefix": ["cr"],
+    "body": ["::: {.right-column}", "$0", ":::"]
+  },
+  "col2": {
+    "prefix": ["col2"],
+    "body": ["::: {layout-ncol=2}", "$0", ":::"]
+  },
+  "col3": {
+    "prefix": ["col3"],
+    "body": ["::: {layout-ncol=3}", "$0", ":::"]
+  },
+  "alert": {
+    "prefix": ["alert"],
+    "body": ["[$0]{.alert}"]
   }
 }
