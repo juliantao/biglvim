@@ -121,7 +121,7 @@
   "background image": {
     "prefix": ["bgimg"],
     "body": [
-      "{background-image=\"${1: ./imge/some}\"  background-position=right  background-size=contain}"
+      "{data-background-image=\"${1: ./imge/some}\"  data-background-position=right  data-background-size=contain}"
     ]
   },
   "pl": {
