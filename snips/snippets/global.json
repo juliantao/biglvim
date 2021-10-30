@@ -140,6 +140,31 @@
     "prefix": ["cr"],
     "body": ["::: {.right-column}", "$0", ":::"]
   },
+  "container": {
+    "prefix": ["con"],
+    "body": ["::: {.container}", "$1", ":::"]
+  },
+  "col": {
+    "prefix": ["col"],
+    "body": [":::: {.col}", "$1", "::::"]
+  },
+
+  "2col": {
+    "prefix": ["2col"],
+    "body": [
+      "::: {.container}",
+      "",
+      ":::: {.col}",
+      "![](./img/$1)",
+      "::::",
+      "",
+      ":::: {.col}",
+      "$2",
+      "::::",
+      "",
+      ":::"
+    ]
+  },
   "col2": {
     "prefix": ["col2"],
     "body": ["::: {layout-ncol=2}", "$0", ":::"]
