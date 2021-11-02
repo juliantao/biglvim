@@ -73,18 +73,6 @@ lvim.plugins = {
 		config = function()
 			require("clipboard-image").setup({
 				default = {
-					img_name = function()
-						local img_dir = require("clipboard-image.config").get_config().img_dir()
-						local index = 1
-						for output in io.popen("ls " .. img_dir):lines() do
-							if output == "image" .. index .. ".png" then
-								index = index + 1
-							else
-								break
-							end
-						end
-						return "image" .. index
-					end,
 					affix = "![](%s)",
 				},
 			})
