@@ -49,7 +49,7 @@ lvim.plugins = {
 					auto_diary_index = 1,
 					auto_generate_links = 1,
 					auto_generate_tags = 1,
-					ext = ".rmd",
+					ext = ".md",
 				},
 			}
 			vim.g.vimwiki_commentstring = "<!--%s-->"
@@ -259,7 +259,6 @@ require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" }
 
 lvim.autocommands.custom_groups = {
 	{ "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=rmd" },
-	{ "BufWinEnter,BufNewFile,BufRead", "*.wiki", "set ft=pandoc" },
 	{ "Filetype", "python", "map <buffer> <leader>bb :w<CR>:exec '!python3' shellescape(@%, 1)<CR>" },
 	{
 		"Filetype",
@@ -269,7 +268,7 @@ lvim.autocommands.custom_groups = {
 	{
 		"Filetype",
 		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
-		"map <buffer> <leader>pp :w<CR>:exec '!quarto preview' shellescape(@%, 1)<CR>",
+		"map <buffer> <leader>qq :w<CR>:exec '!quarto preview' shellescape(@%, 1)<CR>",
 	},
 	-- { "Filetype", "vimwiki", "nunmap <buffer> <CR>" },
 	{ "VimLeave", "*.tex", "!texclear.sh" },
