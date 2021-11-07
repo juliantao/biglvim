@@ -181,8 +181,8 @@ lvim.plugins = {
 			vim.g.Rout_more_colors = 1
 			vim.g.R_set_omnifunc = {}
 			vim.g.R_auto_omni = {}
-			-- vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
-			-- vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+			vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
 		end,
 	},
 	{
@@ -243,12 +243,7 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- LSP
-lvim.lang.python.formatters = { { exe = "black" } }
-lvim.lang.python.linters = {
-	{ exe = "flake8", args = { "--ignore", "E501, E266, E265" } },
-}
-lvim.lang.lua.formatters = { { exe = "stylua" } }
-lvim.lang.json.formatters = { { exe = "prettier" } }
+lvim.lsp.diagnostics.virtual_text = false
 require("lspconfig").r_language_server.setup({})
 
 -- Snippet
