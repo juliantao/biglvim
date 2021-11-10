@@ -237,6 +237,25 @@ lvim.plugins = {
 	{ "sirtaj/vim-openscad" },
 }
 
+--Builtin Plugins
+require("nvim-web-devicons").set_icon({
+	zsh = {
+		icon = "",
+		color = "#428850",
+		name = "Zsh",
+	},
+	qmd = {
+		icon = "",
+		color = "#519aba",
+		name = "qmd",
+	},
+	bib = {
+		icon = "ﭨ",
+		color = "#3D6117",
+		name = "bib",
+	},
+})
+
 -- treesitter
 lvim.builtin.treesitter.ensure_installed = {}
 lvim.builtin.treesitter.ignore_install = { "haskell" }
