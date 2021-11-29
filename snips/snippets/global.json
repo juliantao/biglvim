@@ -1,6 +1,8 @@
 {
   "iframe": {
-    "prefix": ["iframe"],
+    "prefix": [
+      "iframe"
+    ],
     "body": [
       "::: {#fig-${1:cap}}",
       "",
@@ -11,7 +13,9 @@
     ]
   },
   "fig3": {
-    "prefix": ["fig3"],
+    "prefix": [
+      "fig3"
+    ],
     "body": [
       "::: {#fig-${1:label} layout=\"[[1, 1], [1]]\"}",
       "",
@@ -26,7 +30,9 @@
     ]
   },
   "fig2": {
-    "prefix": ["fig2"],
+    "prefix": [
+      "fig2"
+    ],
     "body": [
       "::: {#fig-${1:label} layout=\"[1,1]\"}",
       "",
@@ -39,11 +45,19 @@
     ]
   },
   "eq": {
-    "prefix": ["eq"],
-    "body": ["\\$\\$", "$1", "\\$\\$ {#eq-${2: label}}"]
+    "prefix": [
+      "eq"
+    ],
+    "body": [
+      "\\$\\$",
+      "$1",
+      "\\$\\$ {#eq-${2: label}}"
+    ]
   },
   "pyfig2": {
-    "prefix": ["pyfig2"],
+    "prefix": [
+      "pyfig2"
+    ],
     "body": [
       "```{python} ",
       "#| label: fig-$1",
@@ -67,7 +81,9 @@
     ]
   },
   "pyfig1": {
-    "prefix": ["pyfig1"],
+    "prefix": [
+      "pyfig1"
+    ],
     "body": [
       "```{python}",
       "#| label: fig-$1",
@@ -83,27 +99,51 @@
     ]
   },
   "div": {
-    "prefix": ["div"],
-    "body": ["::: {$1}", "$2", ":::"]
+    "prefix": [
+      "div"
+    ],
+    "body": [
+      "::: {$1}",
+      "$2",
+      ":::"
+    ]
   },
   "figref": {
-    "prefix": ["figref"],
-    "body": ["@fig-$1"]
+    "prefix": [
+      "figref"
+    ],
+    "body": [
+      "@fig-$1"
+    ]
   },
   "tblref": {
-    "prefix": ["tblref"],
-    "body": ["@tbl-$1"]
+    "prefix": [
+      "tblref"
+    ],
+    "body": [
+      "@tbl-$1"
+    ]
   },
   "eqnref": {
-    "prefix": ["eqnref"],
-    "body": ["@eq-$1"]
+    "prefix": [
+      "eqnref"
+    ],
+    "body": [
+      "@eq-$1"
+    ]
   },
   "secref": {
-    "prefix": ["secref"],
-    "body": ["@sec-$1"]
+    "prefix": [
+      "secref"
+    ],
+    "body": [
+      "@sec-$1"
+    ]
   },
   "crossref": {
-    "prefix": ["crossref"],
+    "prefix": [
+      "crossref"
+    ],
     "body": [
       "crossref:",
       "  fig-title: Figure",
@@ -115,66 +155,122 @@
     ]
   },
   "fig": {
-    "prefix": ["fig"],
-    "body": ["![${1:cap1}](${1:figure}){#fig-$1}"]
+    "prefix": [
+      "fig"
+    ],
+    "body": [
+      "![${1:cap1}](${1:figure}){#fig-$1}"
+    ]
   },
   "background image": {
-    "prefix": ["bgimg"],
+    "prefix": [
+      "bgimg"
+    ],
     "body": [
       "{data-background-image=\"${1: ./imge/some}\"  data-background-position=right  data-background-size=contain}"
     ]
   },
   "pl": {
-    "prefix": ["pl"],
-    "body": ["::: {.pull-left}", "$0", ":::"]
+    "prefix": [
+      "pl"
+    ],
+    "body": [
+      "::: {.pull-left}",
+      "$0",
+      ":::"
+    ]
   },
   "pr": {
-    "prefix": ["pr"],
-    "body": ["::: {.pull-right}", "$0", ":::"]
+    "prefix": [
+      "pr"
+    ],
+    "body": [
+      "::: {.pull-right}",
+      "$0",
+      ":::"
+    ]
   },
   "cl": {
-    "prefix": ["cl"],
-    "body": ["::: {.left-column}", "$0", ":::"]
+    "prefix": [
+      "cl"
+    ],
+    "body": [
+      "::: {.left-column}",
+      "$0",
+      ":::"
+    ]
   },
   "cr": {
-    "prefix": ["cr"],
-    "body": ["::: {.right-column}", "$0", ":::"]
+    "prefix": [
+      "cr"
+    ],
+    "body": [
+      "::: {.right-column}",
+      "$0",
+      ":::"
+    ]
   },
   "container": {
-    "prefix": ["con"],
-    "body": ["::: {.container}", "$1", ":::"]
-  },
-  "col": {
-    "prefix": ["col"],
-    "body": [":::: {.col}", "$1", "::::"]
-  },
-
-  "2col": {
-    "prefix": ["2col"],
+    "prefix": [
+      "con"
+    ],
     "body": [
       "::: {.container}",
-      "",
+      "$1",
+      ":::"
+    ]
+  },
+  "col": {
+    "prefix": [
+      "col"
+    ],
+    "body": [
       ":::: {.col}",
-      "![](./img/$1)",
-      "::::",
-      "",
-      ":::: {.col}",
+      "$1",
+      "::::"
+    ]
+  },
+  "2col": {
+    "prefix": [
+      "2col"
+    ],
+    "body": [
+      "::: {.container}",
+      "::: {.col}",
+      "$1",
+      ":::",
+      "::: {.col}",
       "$2",
-      "::::",
-      "",
+      ":::",
       ":::"
     ]
   },
   "col2": {
-    "prefix": ["col2"],
-    "body": ["::: {layout-ncol=2}", "$0", ":::"]
+    "prefix": [
+      "col2"
+    ],
+    "body": [
+      "::: {layout-ncol=2}",
+      "$0",
+      ":::"
+    ]
   },
   "col3": {
-    "prefix": ["col3"],
-    "body": ["::: {layout-ncol=3}", "$0", ":::"]
+    "prefix": [
+      "col3"
+    ],
+    "body": [
+      "::: {layout-ncol=3}",
+      "$0",
+      ":::"
+    ]
   },
   "alert": {
-    "prefix": ["alert"],
-    "body": ["[$0]{.alert}"]
+    "prefix": [
+      "alert"
+    ],
+    "body": [
+      "[$0]{.alert}"
+    ]
   }
 }
