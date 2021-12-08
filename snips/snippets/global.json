@@ -161,6 +161,19 @@
       ":::"
     ]
   },
+  "cols": {
+    "prefix": ["cols"],
+    "body": [
+      "::: {.columns}",
+      "::: {.column width=\"$1\"}",
+      "$2",
+      ":::",
+      "::: {.column width=\"$3\"}",
+      "$4",
+      ":::",
+      ":::"
+    ]
+  },
   "lay": {
     "prefix": ["lay"],
     "body": ["::: {layout=\"[[$4], [$5]]\"}", "![](./img/$1})", "::::"]
@@ -180,6 +193,22 @@
   "width": {
     "prefix": ["width"],
     "body": ["{width=\"$3\"}"]
+  },
+  "hidden": {
+    "prefix": ["hidden"],
+    "body": ["{visibility=\"hidden\"}"]
+  },
+  "uncount": {
+    "prefix": ["uncount"],
+    "body": ["{visibility=\"uncounted\"}"]
+  },
+  "fragment": {
+    "prefix": ["frag"],
+    "body": ["::: {.fragment}", "$1", ":::"]
+  },
+  "notes": {
+    "prefix": ["notes"],
+    "body": ["::: {.notes}", "$1", ":::"]
   },
   "alert": {
     "prefix": ["alert"],
