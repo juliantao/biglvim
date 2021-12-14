@@ -35,4 +35,9 @@ endfunction
 " autocmd  BufWinEnter,BufNewFile,BufRead *.qmd set ft=rmd
 
 source ~/.cache/calendar.vim/credentials.vim
+
+" readonly options
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+
 " vim:fdm=marker
