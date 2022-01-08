@@ -37,7 +37,7 @@ endfunction
 source ~/.cache/calendar.vim/credentials.vim
 
 " readonly options
-cnoremap sw!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+" cnoremap sw!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 
 " vim:fdm=marker
