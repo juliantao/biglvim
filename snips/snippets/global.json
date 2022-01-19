@@ -42,6 +42,10 @@
     "prefix": ["eq"],
     "body": ["\\$\\$", "$1", "\\$\\$ {#eq-${2: label}}"]
   },
+  "py": {
+    "prefix": ["py"],
+    "body": ["```{python} ", "$1", "```"]
+  },
   "pyfig2": {
     "prefix": ["pyfig2"],
     "body": [
