@@ -184,7 +184,7 @@
   },
   "callout": {
     "prefix": ["call"],
-    "body": ["::: {.callout-[$1]}", "$0", ":::"]
+    "body": ["::: {.callout-$1}", "$0", ":::"]
   },
   "col2": {
     "prefix": ["col2"],
