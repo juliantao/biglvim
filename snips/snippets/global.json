@@ -180,7 +180,11 @@
   },
   "lay": {
     "prefix": ["lay"],
-    "body": ["::: {layout=\"[[$4], [$5]]\"}", "![](./img/$1})", "::::"]
+    "body": ["::: {layout=\"[$1]\"}", ":::"]
+  },
+  "callout": {
+    "prefix": ["call"],
+    "body": ["::: {.callout-[$1]}", "$0", ":::"]
   },
   "col2": {
     "prefix": ["col2"],
