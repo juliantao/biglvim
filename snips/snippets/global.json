@@ -46,6 +46,10 @@
     "prefix": ["py"],
     "body": ["```{python} ", "$1", "```"]
   },
+  "rcode": {
+    "prefix": ["rcode"],
+    "body": ["```{r} ", "$1", "```"]
+  },
   "pyfig2": {
     "prefix": ["pyfig2"],
     "body": [
