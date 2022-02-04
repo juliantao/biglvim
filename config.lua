@@ -185,6 +185,10 @@ lvim.plugins = {
 		end,
 	},
 	{
+		"metakirby5/codi.vim",
+		cmd = "Codi",
+	},
+	{
 		"dkarter/bullets.vim",
 		config = function()
 			vim.g.bullets_mapping_leader = "<SPACE>"
@@ -263,6 +267,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
 require("lspconfig").r_language_server.setup({})
+require("lspconfig").grammarly.setup({ filetypes = { "rmd", "qmd", "markdown", "vimwiki" } })
 
 -- Snippet
 
