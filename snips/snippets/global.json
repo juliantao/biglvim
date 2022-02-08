@@ -229,5 +229,13 @@
   "alert": {
     "prefix": ["alert"],
     "body": ["[$0]{.alert}"]
+  },
+  "importmartdown": {
+    "prefix": ["importmd"],
+    "body": ["from IPython.display import display, Markdown"]
+  },
+  "pymarkdown": {
+    "prefix": ["pymd"],
+    "body": ["display(Markdown(\"\"\"", "{$1}", "\"\"\".format($1 = $1)))", ""]
   }
 }
