@@ -230,6 +230,10 @@
     "prefix": ["alert"],
     "body": ["[$0]{.alert}"]
   },
+  "br": {
+    "prefix": ["br"],
+    "body": ["<br/>"]
+  },
   "importmartdown": {
     "prefix": ["importmd"],
     "body": ["from IPython.display import display, Markdown"]
