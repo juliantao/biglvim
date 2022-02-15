@@ -252,6 +252,11 @@ require("nvim-web-devicons").set_icon({
 		color = "#519aba",
 		name = "qmd",
 	},
+	dot = {
+		icon = "ﰟ",
+		color = "#FFB13B",
+		name = "dot",
+	},
 	bib = {
 		icon = "ﭨ",
 		color = "#3D6117",
