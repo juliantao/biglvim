@@ -186,6 +186,10 @@
     "prefix": ["lay"],
     "body": ["::: {layout=\"[$1]\"}", ":::"]
   },
+  "layout-valign": {
+    "prefix": ["valign"],
+    "body": ["layout-valign=\"$1\""]
+  },
   "callout": {
     "prefix": ["call"],
     "body": ["::: {.callout-$1}", "$0", ":::"]
@@ -234,7 +238,7 @@
     "prefix": ["br"],
     "body": ["<br/>"]
   },
-  "importmartdown": {
+  "importmarkdown": {
     "prefix": ["importmd"],
     "body": ["from IPython.display import display, Markdown"]
   },
