@@ -245,5 +245,20 @@
   "pymarkdown": {
     "prefix": ["pymd"],
     "body": ["display(Markdown(\"\"\"", "{$1}", "\"\"\".format($1 = $1)))", ""]
+  },
+  "begin": {
+    "body": "\\begin{${1:something}}\n\t$0\n\\end{$1}",
+    "description": "begin{} / end{}",
+    "prefix": "begin"
+  },
+  "eqalign": {
+    "body": "\\begin{align}\n\t$0\n\\end{align}",
+    "description": "Align",
+    "prefix": "eqalign"
+  },
+  "notation": {
+    "body": "$1 &= \\text{$2} \\\\\\",
+    "description": "notation of variables in an equation",
+    "prefix": "notation"
   }
 }
