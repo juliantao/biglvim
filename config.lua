@@ -287,12 +287,12 @@ lvim.autocommands.custom_groups = {
 	{
 		"Filetype",
 		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
-		"map <buffer> <leader>bb :w<CR>:exec '!quarto render' shellescape(@%, 1)<CR>",
+		"map <buffer> <leader>bb :TermExec cmd='quarto preview %'<CR> <C-t>",
 	},
 	{
 		"Filetype",
 		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
-		"map <buffer> <leader>qq :w<CR>:exec '!quarto preview' shellescape(@%, 1)<CR>",
+		"map <buffer> <leader>qq :TermExec cmd='quarto preview %'<CR> <C-t>",
 	},
 	-- { "Filetype", "vimwiki", "nunmap <buffer> <CR>" },
 	{ "VimLeave", "*.tex", "!texclear.sh" },
