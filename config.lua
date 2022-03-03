@@ -287,7 +287,7 @@ lvim.autocommands.custom_groups = {
 	{
 		"Filetype",
 		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
-		"map <buffer> <leader>bb :TermExec cmd='quarto preview %'<CR> <C-t>",
+		"map <buffer> <leader>bb :TermExec cmd='quarto render %'<CR> <C-t>",
 	},
 	{
 		"Filetype",
