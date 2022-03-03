@@ -283,7 +283,7 @@ require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" }
 
 lvim.autocommands.custom_groups = {
 	{ "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=rmd" },
-	{ "Filetype", "python", "map <buffer> <leader>bb :w<CR>:exec '!python3' shellescape(@%, 1)<CR>" },
+	{ "Filetype", "python", "map <buffer> <leader>bb :TermExec cmd='python3 %'<CR> <C-t>" },
 	{
 		"Filetype",
 		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
