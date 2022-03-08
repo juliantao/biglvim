@@ -49,13 +49,13 @@ lvim.plugins = {
 					auto_diary_index = 1,
 					auto_generate_links = 1,
 					auto_generate_tags = 1,
-					ext = ".md",
+					ext = ".qmd",
 				},
 			}
 			vim.g.vimwiki_commentstring = "<!--%s-->"
 			vim.g.vimwiki_folding = ""
 			vim.g.vimwiki_markdown_link_ext = 1
-			vim.g.vimwiki_filetypes = { "rmd" }
+			vim.g.vimwiki_filetypes = { "quarto" }
 			vim.g.vimwiki_key_mappings = { table_mappings = 0, lists_return = 0 }
 		end,
 	},
@@ -160,6 +160,7 @@ lvim.plugins = {
 		end,
 	},
 	{ "sindrets/diffview.nvim" },
+	{ "quarto-dev/quarto-vim" },
 	{
 		"vim-pandoc/vim-pandoc",
 		config = function()
@@ -282,16 +283,16 @@ require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" }
 -- Autocommands
 
 lvim.autocommands.custom_groups = {
-	{ "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=rmd" },
+	-- { "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=rmd" },
 	{ "Filetype", "python", "map <buffer> <leader>bb :TermExec cmd='python3 %'<CR> <C-t>" },
 	{
 		"Filetype",
-		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
+		"quarto,rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
 		"map <buffer> <leader>bb :TermExec cmd='quarto render %'<CR> <C-t>",
 	},
 	{
 		"Filetype",
-		"rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
+		"quarto,rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
 		"map <buffer> <leader>qq :TermExec cmd='quarto preview %'<CR> <C-t>",
 	},
 	-- { "Filetype", "vimwiki", "nunmap <buffer> <CR>" },
