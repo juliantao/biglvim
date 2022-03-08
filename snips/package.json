@@ -7,12 +7,23 @@
     "snippets": [
       {
         "language": [
+          "quarto"
+        ],
+        "path": "./snippets/quarto.json"
+      },
+      {
+        "language": [
+          "quarto"
+        ],
+        "path": "./snippets/tex.json"
+      },
+      {
+        "language": [
           "plaintext",
           "markdown",
           "tex",
           "html",
           "rmd",
-          "qmd",
           "global"
         ],
         "path": "./snippets/global.json"
