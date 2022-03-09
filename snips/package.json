@@ -23,8 +23,7 @@
           "markdown",
           "tex",
           "html",
-          "rmd",
-          "global"
+          "rmd"
         ],
         "path": "./snippets/global.json"
       },
