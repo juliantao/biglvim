@@ -193,7 +193,7 @@ lvim.plugins = {
 	{
 		"dkarter/bullets.vim",
 		config = function()
-			-- vim.g.bullets_mapping_leader = "<SPACE>"
+			vim.g.bullets_mapping_leader = "<SPACE>"
 			vim.g.bullets_enabled_file_types = {
 				"markdown",
 				"quarto",
