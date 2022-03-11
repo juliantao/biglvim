@@ -6,6 +6,7 @@ lvim.lint_on_save = true
 lvim.colorscheme = "gruvbox-material"
 vim.opt.relativenumber = true
 vim.api.nvim_command("set nofoldenable")
+vim.api.nvim_command("set conceallevel=0")
 
 -- Keymappings
 lvim.leader = "space"
@@ -30,68 +31,31 @@ lvim.builtin.bufferline.active = true
 
 -- Additional Plugins
 lvim.plugins = {
+	-- colorscheme
 	{ "sainnhe/gruvbox-material" },
-	{ "reedes/vim-wordy" },
+
+	-- tpope
 	{
 		"tpope/vim-surround",
 		keys = { "c", "d", "y" },
 	},
 	{ "tpope/vim-repeat" },
-	{ "ray-x/lsp_signature.nvim" },
+
+	-- pandoc, quarto, latex, rmarkdown, wiki
 	{
-		"vimwiki/vimwiki",
-		branch = "dev",
+		"vim-pandoc/vim-pandoc",
 		config = function()
-			vim.g.vimwiki_list = {
-				{
-					path = "~/Dropbox (ASU)/wiki",
-					syntax = "markdown",
-					diary_header = "Journal",
-					auto_diary_index = 1,
-					auto_generate_links = 1,
-					auto_generate_tags = 1,
-					ext = ".qmd",
-				},
-			}
-			vim.g.vimwiki_commentstring = "<!--%s-->"
-			vim.g.vimwiki_folding = ""
-			vim.g.vimwiki_markdown_link_ext = 1
-			vim.g.vimwiki_filetypes = { "quarto" }
-			vim.g.vimwiki_key_mappings = { table_mappings = 0, lists_return = 0 }
+			vim.g["pandoc#modules#disabled"] = { "folding" }
 		end,
 	},
 	{
-		"tools-life/taskwiki",
+		"vim-pandoc/vim-pandoc-syntax",
 		config = function()
-			-- vim.g.taskwiki_disable = true
-			vim.g.taskwiki_dont_preserve_folds = "yes"
-			vim.g.taskwiki_disable_concealcursor = "yes"
-			vim.g.taskwiki_maplocalleader = ",t"
+			vim.g["pandoc#syntax#codeblocks#embeds#langs"] = { "python", "r", "cpp", "bash=sh", "latex=tex" }
+			vim.g["pandoc#syntax#conceal#use"] = 0
 		end,
 	},
-	{
-		"ekickx/clipboard-image.nvim",
-		config = function()
-			require("clipboard-image").setup({
-				default = {
-					img_name = function()
-						vim.fn.inputsave()
-						local name = vim.fn.input("Name: ")
-						vim.fn.inputrestore()
-						return name
-					end,
-					affix = "![](%s)",
-				},
-			})
-		end,
-	},
-	{
-		"itchyny/calendar.vim",
-		config = function()
-			vim.g.calendar_google_calendar = 1
-			vim.g.calendar_google_task = 1
-		end,
-	},
+	{ "quarto-dev/quarto-vim" },
 	{
 		"lervag/vimtex",
 		config = function()
@@ -136,43 +100,34 @@ lvim.plugins = {
 		end,
 	},
 	{
-		"ethanholz/nvim-lastplace",
-		event = "BufRead",
+		"vimwiki/vimwiki",
+		branch = "dev",
 		config = function()
-			require("nvim-lastplace").setup({
-				lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
-				lastplace_ignore_filetype = {
-					"gitcommit",
-					"gitrebase",
-					"svn",
-					"hgcommit",
+			vim.g.vimwiki_list = {
+				{
+					path = "~/Dropbox (ASU)/wiki",
+					syntax = "markdown",
+					diary_header = "Journal",
+					auto_diary_index = 1,
+					auto_generate_links = 1,
+					auto_generate_tags = 1,
+					ext = ".qmd",
 				},
-				lastplace_open_folds = true,
-			})
+			}
+			vim.g.vimwiki_commentstring = "<!--%s-->"
+			vim.g.vimwiki_folding = ""
+			vim.g.vimwiki_markdown_link_ext = 1
+			vim.g.vimwiki_filetypes = { "quarto" }
+			vim.g.vimwiki_key_mappings = { table_mappings = 0, lists_return = 0 }
 		end,
 	},
 	{
-		"kevinhwang91/rnvimr",
-		cmd = "RnvimrToggle",
+		"tools-life/taskwiki",
 		config = function()
-			vim.g.rnvimr_draw_border = 1
-			vim.g.rnvimr_pick_enable = 1
-			vim.g.rnvimr_bw_enable = 1
-		end,
-	},
-	{ "sindrets/diffview.nvim" },
-	{ "quarto-dev/quarto-vim" },
-	{
-		"vim-pandoc/vim-pandoc",
-		config = function()
-			vim.g["pandoc#modules#disabled"] = { "folding" }
-		end,
-	},
-	{
-		"vim-pandoc/vim-pandoc-syntax",
-		config = function()
-			vim.g["pandoc#syntax#codeblocks#embeds#langs"] = { "python", "r", "cpp", "bash=sh", "latex=tex" }
-			vim.g["pandoc#syntax#conceal#use"] = 0
+			-- vim.g.taskwiki_disable = true
+			vim.g.taskwiki_dont_preserve_folds = "yes"
+			vim.g.taskwiki_disable_concealcursor = "yes"
+			vim.g.taskwiki_maplocalleader = ",t"
 		end,
 	},
 	{
@@ -186,9 +141,24 @@ lvim.plugins = {
 			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
 		end,
 	},
+
+	-- prose writing
+	{ "reedes/vim-wordy" },
 	{
-		"metakirby5/codi.vim",
-		cmd = "Codi",
+		"ekickx/clipboard-image.nvim",
+		config = function()
+			require("clipboard-image").setup({
+				default = {
+					img_name = function()
+						vim.fn.inputsave()
+						local name = vim.fn.input("Name: ")
+						vim.fn.inputrestore()
+						return name
+					end,
+					affix = "![](%s)",
+				},
+			})
+		end,
 	},
 	{
 		"dkarter/bullets.vim",
@@ -196,7 +166,7 @@ lvim.plugins = {
 			vim.g.bullets_mapping_leader = "<SPACE>"
 			vim.g.bullets_enabled_file_types = {
 				"markdown",
-				-- "quarto",
+				"quarto",
 				"rmarkdown",
 				"rmd",
 				"pandoc",
@@ -219,12 +189,11 @@ lvim.plugins = {
 		end,
 		keys = "<Plug>(EasyAlign)",
 	},
-	{
-		"glacambre/firenvim",
-		run = function()
-			vim.fn["firenvim#install"](0)
-		end,
-	},
+
+	-- lsp
+	{ "ray-x/lsp_signature.nvim" },
+
+	-- general interface
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
@@ -238,6 +207,45 @@ lvim.plugins = {
 				css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
 			})
 		end,
+	},
+	{
+		"ethanholz/nvim-lastplace",
+		event = "BufRead",
+		config = function()
+			require("nvim-lastplace").setup({
+				lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+				lastplace_ignore_filetype = {
+					"gitcommit",
+					"gitrebase",
+					"svn",
+					"hgcommit",
+				},
+				lastplace_open_folds = true,
+			})
+		end,
+	},
+	{
+		"itchyny/calendar.vim",
+		config = function()
+			vim.g.calendar_google_calendar = 1
+			vim.g.calendar_google_task = 1
+		end,
+	},
+	{
+		"kevinhwang91/rnvimr",
+		cmd = "RnvimrToggle",
+		config = function()
+			vim.g.rnvimr_draw_border = 1
+			vim.g.rnvimr_pick_enable = 1
+			vim.g.rnvimr_bw_enable = 1
+		end,
+	},
+	{ "sindrets/diffview.nvim" },
+
+	-- languages
+	{
+		"metakirby5/codi.vim",
+		cmd = "Codi",
 	},
 	{ "sirtaj/vim-openscad" },
 }
@@ -284,7 +292,6 @@ require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" }
 -- Autocommands
 
 lvim.autocommands.custom_groups = {
-	-- { "BufWinEnter,BufNewFile,BufRead", "*.qmd", "set ft=rmd" },
 	{ "Filetype", "python", "map <buffer> <leader>bb :TermExec cmd='python3 %'<CR> <C-t>" },
 	{
 		"Filetype",
