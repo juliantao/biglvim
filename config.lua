@@ -196,7 +196,7 @@ lvim.plugins = {
 			vim.g.bullets_mapping_leader = "<SPACE>"
 			vim.g.bullets_enabled_file_types = {
 				"markdown",
-				"quarto",
+				-- "quarto",
 				"rmarkdown",
 				"rmd",
 				"pandoc",

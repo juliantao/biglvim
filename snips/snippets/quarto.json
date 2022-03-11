@@ -132,7 +132,7 @@
   },
   "fig": {
     "prefix": ["fig"],
-    "body": ["![${1:cap1}](${1:figure}){#fig-$1}"]
+    "body": ["![${1:cap1}](${2:figure}){#fig-$3}"]
   },
   "background image": {
     "prefix": ["bgimg"],
