@@ -242,12 +242,13 @@ lvim.plugins = {
 		end,
 	},
 	{ "sindrets/diffview.nvim" },
+	{ "pwntester/octo.nvim" },
 
 	-- languages
-	{
-		"metakirby5/codi.vim",
-		cmd = "Codi",
-	},
+	-- {
+	-- 	"metakirby5/codi.vim",
+	-- 	cmd = "Codi",
+	-- },
 	{ "sirtaj/vim-openscad" },
 }
 
