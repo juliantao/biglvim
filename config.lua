@@ -7,6 +7,7 @@ lvim.colorscheme = "gruvbox-material"
 vim.opt.relativenumber = true
 vim.api.nvim_command("set nofoldenable")
 vim.api.nvim_command("set conceallevel=0")
+vim.cmd("colorscheme gruvbox-material")
 
 -- Keymappings
 lvim.leader = "space"
