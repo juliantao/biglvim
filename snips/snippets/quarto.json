@@ -130,6 +130,10 @@
       "  eq-prefix: Eq."
     ]
   },
+  "img": {
+    "prefix": ["img"],
+    "body": ["![](./img/$1)"]
+  },
   "fig": {
     "prefix": ["fig"],
     "body": ["![${1:cap1}](${2:figure}){#fig-$3}"]
