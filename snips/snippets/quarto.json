@@ -100,7 +100,7 @@
   },
   "div": {
     "prefix": ["div"],
-    "body": ["::: {$1}", "$2", ":::"]
+    "body": ["::: {$1}", "$2", ":::", "$0"]
   },
   "figref": {
     "prefix": ["figref"],
@@ -196,7 +196,7 @@
   },
   "lay": {
     "prefix": ["lay"],
-    "body": ["::: {layout=\"[$1]\"}", ":::"]
+    "body": ["::: {layout=\"[$1]\"}", "$2", ":::"]
   },
   "layout-valign": {
     "prefix": ["valign"],
@@ -244,7 +244,7 @@
   },
   "alert": {
     "prefix": ["alert"],
-    "body": ["[$0]{.alert}"]
+    "body": ["[$1]{.alert}"]
   },
   "br": {
     "prefix": ["br"],
@@ -288,14 +288,7 @@
     "prefix": "bib"
   },
   "diary header": {
-    "body": [
-      "---",
-      "title: \"$1\"",
-      "date: \"$2\"",
-      "categories: [$3]",
-      "---",
-      "$0"
-    ],
+    "body": ["---", "title: \"$1\"", "date: \"$2\"", "categories: [$3]", "---"],
     "description": "Add minimal yaml header",
     "prefix": "diary"
   },

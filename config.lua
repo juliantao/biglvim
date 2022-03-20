@@ -7,7 +7,7 @@ lvim.colorscheme = "gruvbox-material"
 vim.opt.relativenumber = true
 vim.api.nvim_command("set nofoldenable")
 vim.api.nvim_command("set conceallevel=0")
-vim.cmd("colorscheme gruvbox-material")
+-- vim.cmd("colorscheme gruvbox-material")
 
 -- Keymappings
 lvim.leader = "space"
@@ -23,7 +23,6 @@ lvim.builtin.which_key.mappings["gd"] = { "<cmd>DiffviewOpen HEAD~1<cr>", "Diff"
 lvim.builtin.which_key.mappings["tr"] = { "<cmd>RnvimrToggle<cr>", "Ranger" }
 
 -- Plugins
-lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
