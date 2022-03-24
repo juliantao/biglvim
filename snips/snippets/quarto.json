@@ -242,6 +242,10 @@
     "prefix": ["notes"],
     "body": ["::: {.notes}", "$0", ":::"]
   },
+  "solution": {
+    "prefix": ["solutoin"],
+    "body": ["::: {.solution}", "$0", ":::"]
+  },
   "alert": {
     "prefix": ["alert"],
     "body": ["[$0]{.alert}"]
