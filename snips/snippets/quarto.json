@@ -100,7 +100,7 @@
   },
   "div": {
     "prefix": ["div"],
-    "body": ["::: {$1}", "$2", ":::", "$0"]
+    "body": ["::: {$1}", "$0", ":::"]
   },
   "figref": {
     "prefix": ["figref"],
@@ -196,11 +196,11 @@
   },
   "lay": {
     "prefix": ["lay"],
-    "body": ["::: {layout=\"[$1]\"}", "$2", ":::"]
+    "body": ["::: {layout=\"[$1]\"}", "$0", ":::"]
   },
   "layout-valign": {
     "prefix": ["valign"],
-    "body": ["layout-valign=\"$1\""]
+    "body": ["layout-valign=\"$0\""]
   },
   "callout": {
     "prefix": ["call"],
@@ -236,15 +236,15 @@
   },
   "fragment": {
     "prefix": ["frag"],
-    "body": ["::: {.fragment}", "$1", ":::"]
+    "body": ["::: {.fragment}", "$0", ":::"]
   },
   "notes": {
     "prefix": ["notes"],
-    "body": ["::: {.notes}", "$1", ":::"]
+    "body": ["::: {.notes}", "$0", ":::"]
   },
   "alert": {
     "prefix": ["alert"],
-    "body": ["[$1]{.alert}"]
+    "body": ["[$0]{.alert}"]
   },
   "br": {
     "prefix": ["br"],
