@@ -12,7 +12,7 @@ vim.api.nvim_command("set conceallevel=0")
 -- Keymappings
 lvim.leader = "space"
 vim.g.maplocalleader = ","
-lvim.keys.insert_mode["<C-l>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
+lvim.keys.insert_mode["<C-B>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
 lvim.keys.insert_mode["<Localleader>da"] = "<C-r>=strftime('%x')<CR>"
 lvim.keys.normal_mode["<Localleader>mm"] = "i <++>"
 lvim.keys.normal_mode["<leader>ii"] = ":PasteImg<CR>"

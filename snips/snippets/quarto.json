@@ -312,6 +312,11 @@
     "description": "Add wrap figure with a caption and a label",
     "prefix": "wrap"
   },
+  "def list": {
+    "body": ["${1:def}", "  ~ ${2:text}"],
+    "description": "compact defination list",
+    "prefix": "def"
+  },
   "ref a wrap figure": {
     "body": "Fig. \\ref{fig-$1}",
     "description": "refer to a label for a wrap figure",
