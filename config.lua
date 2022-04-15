@@ -296,7 +296,11 @@ require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" }
 
 lvim.autocommands.custom_groups = {
 	{ "Filetype", "python", "map <buffer> <leader>bb :TermExec cmd='python3 %'<CR> <C-t>" },
-	{ "Filetype", "mermaid", "map <buffer> <leader>bb :TermExec cmd='mmdc -i % -o $(basename % .mmd).pdf'<CR> <C-t>" },
+	{
+		"Filetype",
+		"mermaid",
+		"map <buffer> <leader>bb :TermExec cmd='mmdc -i % -o $(basename % .mmd).pdf -f\\|gopen $(basename % .mmd).pdf'<CR> <C-t>",
+	},
 	{
 		"Filetype",
 		"quarto,rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
