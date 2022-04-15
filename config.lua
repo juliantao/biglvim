@@ -56,6 +56,7 @@ lvim.plugins = {
 		end,
 	},
 	{ "quarto-dev/quarto-vim" },
+	{ "mracos/mermaid.vim" },
 	{
 		"lervag/vimtex",
 		config = function()
