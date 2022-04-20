@@ -12,13 +12,15 @@ vim.api.nvim_command("set conceallevel=0")
 -- Keymappings
 lvim.leader = "space"
 vim.g.maplocalleader = ","
+lvim.keys.insert_mode["jf"] = "%>%"
+lvim.keys.insert_mode["<M-=>"] = "<-"
 lvim.keys.insert_mode["<C-B>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
+lvim.keys.insert_mode["<C-z>"] = "<C-r>=ZoteroCite()<CR>"
 lvim.keys.insert_mode["<Localleader>da"] = "<C-r>=strftime('%x')<CR>"
 lvim.keys.normal_mode["<Localleader>mm"] = "i <++>"
-lvim.keys.normal_mode["<leader>ii"] = ":PasteImg<CR>"
 lvim.keys.normal_mode["<Localleader>,"] = "/<++><CR>c4l"
 lvim.keys.normal_mode["<localleader>z"] = '"=ZoteroCite()<CR>p'
-lvim.keys.insert_mode["<C-z>"] = "<C-r>=ZoteroCite()<CR>"
+lvim.keys.normal_mode["<leader>ii"] = ":PasteImg<CR>"
 lvim.builtin.which_key.mappings["gd"] = { "<cmd>DiffviewOpen HEAD~1<cr>", "Diff" }
 lvim.builtin.which_key.mappings["tr"] = { "<cmd>RnvimrToggle<cr>", "Ranger" }
 
