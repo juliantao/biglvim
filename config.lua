@@ -289,6 +289,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.lsp.diagnostics.virtual_text = false
 require("lspconfig").r_language_server.setup({})
 require("lspconfig").dotls.setup({})
+-- require("lspconfig").ltex.setup({ filetypes = { "rmd", "bib", "tex", "quarto", "markdown" } })
 -- require("lspconfig").grammarly.setup({ filetypes = { "rmd", "tex", "qmd", "markdown", "vimwiki" } })
 
 -- Snippet
