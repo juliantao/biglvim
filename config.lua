@@ -115,7 +115,7 @@ lvim.plugins = {
 					auto_diary_index = 1,
 					auto_generate_links = 1,
 					auto_generate_tags = 1,
-					ext = ".qmd",
+					ext = ".md",
 				},
 			}
 			vim.g.vimwiki_commentstring = "<!--%s-->"
