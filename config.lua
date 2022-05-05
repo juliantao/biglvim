@@ -123,6 +123,7 @@ lvim.plugins = {
 			vim.g.vimwiki_markdown_link_ext = 1
 			vim.g.vimwiki_filetypes = { "quarto" }
 			vim.g.vimwiki_key_mappings = { table_mappings = 0, lists_return = 1 }
+			vim.g.vimwiki_global_ext = 0
 		end,
 	},
 	{
@@ -164,22 +165,6 @@ lvim.plugins = {
 			})
 		end,
 	},
-	-- {
-	-- 	"dkarter/bullets.vim",
-	-- 	config = function()
-	-- 		-- vim.g.bullets_mapping_leader = "<SPACE>"
-	-- 		vim.g.bullets_enabled_file_types = {
-	-- 			"markdown",
-	-- 			"quarto",
-	-- 			"rmarkdown",
-	-- 			"rmd",
-	-- 			"pandoc",
-	-- 			"text",
-	-- 			"gitcommit",
-	-- 			"scratch",
-	-- 		}
-	-- 	end,
-	-- },
 	{
 		"dhruvasagar/vim-table-mode",
 		config = function()
