@@ -425,12 +425,30 @@
       ":::"
     ]
   },
+  "aside": {
+    "prefix": [
+      "aside"
+    ],
+    "body": [
+      "::: {.aside}",
+      "$0",
+      ":::"
+    ]
+  },
   "alert": {
     "prefix": [
       "alert"
     ],
     "body": [
       "[$0]{.alert}"
+    ]
+  },
+  "fade": {
+    "prefix": [
+      "fade"
+    ],
+    "body": [
+      "[$0]{.fade}"
     ]
   },
   "br": {
@@ -501,7 +519,7 @@
       "categories: [$3]",
       "---"
     ],
-    "description": "Add minimal yaml header",
+    "description": "Add minimal yaml header for diaries",
     "prefix": "diary"
   },
   "yaml header": {

@@ -26,7 +26,6 @@ lvim.builtin.which_key.mappings["tr"] = { "<cmd>RnvimrToggle<cr>", "Ranger" }
 
 -- Plugins
 lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
 lvim.builtin.dap.active = true
 lvim.builtin.bufferline.active = true
@@ -304,6 +303,11 @@ lvim.autocommands.custom_groups = {
 		"Filetype",
 		"mermaid",
 		"map <buffer> <leader>bb :TermExec cmd='mmdc -i % -o $(basename % .mmd).pdf -f\\|gopen $(basename % .mmd).pdf'<CR> <C-t>",
+	},
+	{
+		"Filetype",
+		"quarto,rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
+		"cd .",
 	},
 	{
 		"Filetype",
