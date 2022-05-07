@@ -12,8 +12,9 @@ vim.api.nvim_command("set conceallevel=0")
 -- Keymappings
 lvim.leader = "space"
 vim.g.maplocalleader = ","
-lvim.keys.insert_mode["jf"] = "%>%"
-lvim.keys.insert_mode["<M-=>"] = "<-"
+lvim.keys.insert_mode["jf"] = " %>% "
+lvim.keys.insert_mode["<M-t>"] = "<Esc>:TOC<CR>"
+lvim.keys.normal_mode["<M-t>"] = ":TOC<CR>"
 lvim.keys.insert_mode["<C-B>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
 lvim.keys.insert_mode["<C-z>"] = "<C-r>=ZoteroCite()<CR>"
 lvim.keys.insert_mode["<Localleader>da"] = "<C-r>=strftime('%x')<CR>"
@@ -43,12 +44,7 @@ lvim.plugins = {
 	{ "tpope/vim-repeat" },
 
 	-- pandoc, quarto, latex, rmarkdown, wiki
-	{
-		"vim-pandoc/vim-pandoc",
-		config = function()
-			vim.g["pandoc#modules#disabled"] = { "folding" }
-		end,
-	},
+	{ "vim-pandoc/vim-pandoc" },
 	{
 		"vim-pandoc/vim-pandoc-syntax",
 		config = function()

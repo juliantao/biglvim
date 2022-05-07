@@ -32,7 +32,7 @@ function! ZoteroCite()
   return ref
 endfunction
 
-" autocmd  BufWinEnter,BufNewFile,BufRead *.qmd set ft=rmd
+autocmd  BufWinEnter,BufNewFile,BufRead *.qmd set ft=pandoc.quarto
 
 source ~/.cache/calendar.vim/credentials.vim
 
