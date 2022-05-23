@@ -1,12 +1,12 @@
 -- General
-lvim.format_on_save = true
-lvim.lsp.diagnostics.virtual_text = false
-lvim.log.level = "warn"
-lvim.lint_on_save = true
 lvim.colorscheme = "gruvbox-material"
 vim.opt.relativenumber = true
 vim.api.nvim_command("set nofoldenable")
 vim.api.nvim_command("set conceallevel=0")
+lvim.format_on_save = true
+lvim.lsp.diagnostics.virtual_text = false
+lvim.log.level = "warn"
+lvim.lint_on_save = true
 -- vim.cmd("colorscheme gruvbox-material")
 
 -- Keymappings
