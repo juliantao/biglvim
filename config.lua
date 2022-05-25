@@ -277,32 +277,30 @@ require("lspconfig").dotls.setup({})
 require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" } })
 
 -- Autocommands
-
-lvim.autocommands.custom_groups = {
-	{ "Filetype", "python", "map <buffer> <leader>bb :TermExec cmd='python3 %'<CR> <C-t>" },
-	{
-		"Filetype",
-		"mermaid",
-		"map <buffer> <leader>bb :TermExec cmd='mmdc -i % -o $(basename % .mmd).pdf -f\\|gopen $(basename % .mmd).pdf'<CR> <C-t>",
-	},
-	{
-		"Filetype",
-		"quarto,rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
-		"cd .",
-	},
-	{
-		"Filetype",
-		"quarto,rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
-		"map <buffer> <leader>bb :TermExec cmd='quarto render %'<CR> <C-t>",
-	},
-	{
-		"Filetype",
-		"quarto,rmd,Rmd,qmd,rmarkdown,markdown,md,ipynb,vimwiki",
-		"map <buffer> <leader>qq :TermExec cmd='quarto preview %'<CR> <C-t>",
-	},
-	-- { "Filetype", "vimwiki", "nunmap <buffer> <CR>" },
-	{ "VimLeave", "*.tex", "!texclear.sh" },
-}
+vim.api.nvim_create_autocmd("BufWinEnter,BufNewFile,BufRead", {
+	pattern = { "*.qmd" },
+	command = "set ft=pandoc.quarto",
+})
+vim.api.nvim_create_autocmd("Filetype", {
+	pattern = { "python" },
+	command = "map <buffer> <leader>bb :TermExec cmd='python3 %'<CR> <C-t>",
+})
+vim.api.nvim_create_autocmd("Filetype", {
+	pattern = { "mermaid" },
+	command = "map <buffer> <leader>bb :TermExec cmd='mmdc -i % -o $(basename % .mmd).pdf -f\\|gopen $(basename % .mmd).pdf'<CR> <C-t>",
+})
+vim.api.nvim_create_autocmd("Filetype", {
+	pattern = { "quarto", "rmd", "Rmd", "qmd", "rmarkdown", "markdown", "md", "ipynb", "vimwiki" },
+	command = "cd .",
+})
+vim.api.nvim_create_autocmd("Filetype", {
+	pattern = { "quarto", "rmd", "Rmd", "qmd", "rmarkdown", "markdown", "md", "ipynb", "vimwiki" },
+	command = "map <buffer> <leader>bb :TermExec cmd='quarto render %'<CR> <C-t>",
+})
+vim.api.nvim_create_autocmd("Filetype", {
+	pattern = { "quarto", "rmd", "Rmd", "qmd", "rmarkdown", "markdown", "md", "ipynb", "vimwiki" },
+	command = "map <buffer> <leader>qq :TermExec cmd='quarto preview %'<CR> <C-t>",
+})
 
 --Utilies
 
