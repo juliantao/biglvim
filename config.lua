@@ -258,6 +258,17 @@ require("nvim-web-devicons").set_icon({
 		color = "#3D6117",
 		name = "bib",
 	},
+	cls = {
+		icon = "ﭨ",
+		color = "#3D6117",
+		name = "cls",
+	},
+	csl = {
+		icon = "謹",
+		color = "#e37933",
+		cterm_color = "173",
+		name = "csl",
+	},
 })
 
 -- treesitter
