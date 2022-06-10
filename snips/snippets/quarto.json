@@ -555,5 +555,10 @@
     "body": "Fig. \\ref{fig-$1}",
     "description": "refer to a label for a wrap figure",
     "prefix": "@wrap"
+  },
+  "add comment string": {
+    "body": "<!-- $1 -->",
+    "description": "add a comment string",
+    "prefix": "<"
   }
 }

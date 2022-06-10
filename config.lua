@@ -26,10 +26,9 @@ lvim.builtin.which_key.mappings["gd"] = { "<cmd>DiffviewOpen HEAD~1<cr>", "Diff"
 lvim.builtin.which_key.mappings["tr"] = { "<cmd>RnvimrToggle<cr>", "Ranger" }
 
 -- Plugins
+lvim.builtin.alpha.active = true
+lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.show_icons.git = 1
-lvim.builtin.dap.active = true
-lvim.builtin.bufferline.active = true
 
 -- Additional Plugins
 lvim.plugins = {
