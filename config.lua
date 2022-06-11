@@ -22,6 +22,7 @@ lvim.keys.normal_mode["<Localleader>mm"] = "i <++>"
 lvim.keys.normal_mode["<Localleader>,"] = "/<++><CR>c4l"
 lvim.keys.normal_mode["<localleader>z"] = '"=ZoteroCite()<CR>p'
 lvim.keys.normal_mode["<leader>ii"] = ":PasteImg<CR>"
+lvim.keys.normal_mode["gt"] = ":TOC<CR>"
 lvim.builtin.which_key.mappings["gd"] = { "<cmd>DiffviewOpen HEAD~1<cr>", "Diff" }
 lvim.builtin.which_key.mappings["tr"] = { "<cmd>RnvimrToggle<cr>", "Ranger" }
 
@@ -311,7 +312,6 @@ vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "quarto", "rmd", "Rmd", "qmd", "rmarkdown", "markdown", "md", "ipynb", "vimwiki" },
 	command = "map <buffer> <leader>qq :TermExec cmd='quarto preview %'<CR> <C-t>",
 })
-
 --Utilies
 
 vim.cmd("source " .. "$HOME/.config/lvim/utilis.vim")
