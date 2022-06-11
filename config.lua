@@ -7,6 +7,7 @@ lvim.format_on_save = true
 lvim.lsp.diagnostics.virtual_text = false
 lvim.log.level = "warn"
 lvim.lint_on_save = true
+vim.g.python3_host_prog = "/usr/bin/python"
 -- vim.cmd("colorscheme gruvbox-material")
 
 -- Keymappings
