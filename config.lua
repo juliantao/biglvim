@@ -143,6 +143,13 @@ lvim.plugins = {
 			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
 		end,
 	},
+	{
+		"folke/todo-comments.nvim",
+		event = "BufRead",
+		config = function()
+			require("todo-comments").setup()
+		end,
+	},
 
 	-- prose writing
 	{ "reedes/vim-wordy" },
@@ -227,7 +234,7 @@ lvim.plugins = {
 		end,
 	},
 	{ "sindrets/diffview.nvim" },
-	{ "pwntester/octo.nvim" },
+	{ "pwntester/octo.nvim", event = "BufRead" },
 
 	-- languages
 	-- {
