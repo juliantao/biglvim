@@ -277,6 +277,21 @@ require("nvim-web-devicons").set_icon({
 		cterm_color = "173",
 		name = "csl",
 	},
+	docx = {
+		icon = "",
+		color = "#2b579a",
+		name = "docx",
+	},
+	pptx = {
+		icon = "蠟",
+		color = "#d24726",
+		name = "pptx",
+	},
+	xlsx = {
+		icon = "",
+		color = "#217346",
+		name = "xlsx",
+	},
 })
 
 -- treesitter
