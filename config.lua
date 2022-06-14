@@ -23,8 +23,6 @@ lvim.keys.normal_mode["<Localleader>mm"] = "i <++>"
 lvim.keys.normal_mode["<Localleader>,"] = "/<++><CR>c4l"
 lvim.keys.normal_mode["<localleader>z"] = '"=ZoteroCite()<CR>p'
 lvim.keys.normal_mode["<leader>ii"] = ":PasteImg<CR>"
-lvim.keys.normal_mode["gt"] = ":TOC<CR>"
-lvim.builtin.which_key.mappings["gd"] = { "<cmd>DiffviewOpen HEAD~1<cr>", "Diff" }
 lvim.builtin.which_key.mappings["tr"] = { "<cmd>RnvimrToggle<cr>", "Ranger" }
 
 -- Plugins
