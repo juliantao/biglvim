@@ -232,7 +232,12 @@ lvim.plugins = {
 		end,
 	},
 	{ "sindrets/diffview.nvim" },
-	{ "pwntester/octo.nvim", event = "BufRead" },
+	{
+		"pwntester/octo.nvim",
+		config = function()
+			require("octo").setup()
+		end,
+	},
 
 	-- languages
 	-- {
