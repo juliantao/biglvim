@@ -7,7 +7,7 @@ lvim.format_on_save = true
 lvim.lsp.diagnostics.virtual_text = false
 lvim.log.level = "warn"
 lvim.lint_on_save = true
-vim.g.python3_host_prog = "/usr/bin/python"
+vim.g.python3_host_prog = "/usr/bin/python3"
 -- vim.cmd("colorscheme gruvbox-material")
 
 -- Keymappings
@@ -47,7 +47,7 @@ lvim.plugins = {
 	{
 		"vim-pandoc/vim-pandoc-syntax",
 		config = function()
-			vim.g["pandoc#syntax#codeblocks#embeds#langs"] = { "python", "r", "cpp", "bash=sh", "latex=tex" }
+			-- vim.g["pandoc#syntax#codeblocks#embeds#langs"] = { "python", "r", "cpp", "bash=sh", "latex=tex" }
 			vim.g["pandoc#syntax#conceal#use"] = 0
 		end,
 	},
