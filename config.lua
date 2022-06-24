@@ -274,6 +274,11 @@ require("nvim-web-devicons").set_icon({
 		color = "#3D6117",
 		name = "cls",
 	},
+	bst = {
+		icon = "ﭨ",
+		color = "#3D6117",
+		name = "bst",
+	},
 	csl = {
 		icon = "謹",
 		color = "#e37933",
