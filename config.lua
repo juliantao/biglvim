@@ -130,17 +130,17 @@ lvim.plugins = {
 			vim.g.taskwiki_maplocalleader = ",t"
 		end,
 	},
-	{
-		"jalvesaq/Nvim-R",
-		config = function()
-			vim.g.R_openpdf = 1
-			vim.g.Rout_more_colors = 1
-			vim.g.R_set_omnifunc = {}
-			vim.g.R_auto_omni = {}
-			vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
-			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
-		end,
-	},
+	-- {
+	-- 	"jalvesaq/Nvim-R",
+	-- 	config = function()
+	-- 		vim.g.R_openpdf = 1
+	-- 		vim.g.Rout_more_colors = 1
+	-- 		vim.g.R_set_omnifunc = {}
+	-- 		vim.g.R_auto_omni = {}
+	-- 		vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+	-- 		vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+	-- 	end,
+	-- },
 	{
 		"folke/todo-comments.nvim",
 		event = "BufRead",
