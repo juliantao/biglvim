@@ -18,7 +18,7 @@ lvim.keys.insert_mode["<M-t>"] = "<Esc>:TOC<CR>"
 lvim.keys.normal_mode["<M-t>"] = ":TOC<CR>"
 lvim.keys.insert_mode["<C-B>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
 lvim.keys.insert_mode["<C-z>"] = "<C-r>=ZoteroCite()<CR>"
-lvim.keys.insert_mode["<Localleader>da"] = "<C-r>=strftime('%x')<CR>"
+lvim.keys.insert_mode["<Localleader>da"] = "<C-r>=strftime('%F')<CR>"
 lvim.keys.normal_mode["<Localleader>mm"] = "i <++>"
 lvim.keys.normal_mode["<Localleader>,"] = "/<++><CR>c4l"
 lvim.keys.normal_mode["<localleader>z"] = '"=ZoteroCite()<CR>p'
