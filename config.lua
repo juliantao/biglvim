@@ -1,4 +1,5 @@
 -- General
+vim.opt.termguicolors = true
 lvim.colorscheme = "gruvbox-material"
 vim.opt.relativenumber = true
 vim.api.nvim_command("set nofoldenable")
