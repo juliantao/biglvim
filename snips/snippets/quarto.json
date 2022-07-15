@@ -198,7 +198,7 @@
       "l"
     ],
     "body": [
-      "[]()"
+      "[$1]($2)$0"
     ]
   },
   "img": {
@@ -593,5 +593,10 @@
     "body": "<!-- $1 -->",
     "description": "add a comment string",
     "prefix": "<"
+  },
+  "shortcodes": {
+    "body": "{{ <$1> }}",
+    "description": "add a comment string",
+    "prefix": "shortcodes"
   }
 }
