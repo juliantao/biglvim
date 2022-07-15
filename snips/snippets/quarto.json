@@ -193,6 +193,14 @@
       "  eq-prefix: Eq."
     ]
   },
+  "link": {
+    "prefix": [
+      "l"
+    ],
+    "body": [
+      "[]()"
+    ]
+  },
   "img": {
     "prefix": [
       "img"
@@ -474,7 +482,7 @@
       "todo"
     ],
     "body": [
-      "* [ ] ${1:task} -- due:${2:today} ${3: project:}"
+      "* [ ] ${1:task} -- due:${2:eow}"
     ]
   },
   "importmarkdown": {
