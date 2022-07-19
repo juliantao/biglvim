@@ -34,6 +34,12 @@ endfunction
 
 source ~/.cache/calendar.vim/credentials.vim
 
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent! loadview
+augroup END
+
 " readonly options
 " cnoremap sw!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
