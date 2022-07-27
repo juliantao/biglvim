@@ -147,6 +147,14 @@
       ":::"
     ]
   },
+  "footnote": {
+    "prefix": [
+      "footnote"
+    ],
+    "body": [
+      "[^$1]$0"
+    ]
+  },
   "figref": {
     "prefix": [
       "figref"
