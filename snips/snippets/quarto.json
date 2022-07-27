@@ -477,9 +477,17 @@
       "<br/>"
     ]
   },
-  "todo": {
+  "todo scheduled": {
     "prefix": [
-      "todo"
+      "scheduled"
+    ],
+    "body": [
+      "* [ ] ${1:task} -- scheduled:${2:eom}"
+    ]
+  },
+  "todo due": {
+    "prefix": [
+      "due"
     ],
     "body": [
       "* [ ] ${1:task} -- due:${2:eow}"
