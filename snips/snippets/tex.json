@@ -12,12 +12,12 @@
   "/": {
     "body": "\\\\frac{${VISUAL}}{$1}$0",
     "description": "Fraction",
-    "prefix": "/"
+    "prefix": "fracv"
   },
   "//": {
     "body": "\\\\frac{$1}{$2}$0",
     "description": "Fraction",
-    "prefix": "//"
+    "prefix": "frac"
   },
   "<=": {
     "body": "\\le ",
