@@ -149,7 +149,7 @@
   "background image": {
     "prefix": ["bgimg"],
     "body": [
-      "{data-background-image=\"./img/$1}\"  data-background-position=right  data-background-size=contain}"
+      "{data-background-image=\"./img/$1\"  data-background-position=right  data-background-size=contain}"
     ]
   },
   "pl": {
