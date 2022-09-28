@@ -56,7 +56,16 @@ lvim.plugins = {
 	},
 	{ "quarto-dev/quarto-vim" },
 	{ "mracos/mermaid.vim" },
-	{ "chrisbra/csv.vim" },
+	{
+		"chrisbra/csv.vim",
+		config = function()
+			vim.g.csv_nomap_cr = 1
+			vim.g.csv_nomap_s_h = 1
+			vim.g.csv_nomap_s_l = 1
+			vim.g.csv_nomap_leader = 1
+			vim.g.csv_nomap_space = 1
+		end,
+	},
 	{
 		"lervag/vimtex",
 		config = function()
