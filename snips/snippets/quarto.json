@@ -335,6 +335,20 @@
     "description": "Add minimal yaml header for music posts",
     "prefix": "music"
   },
+  "letter header": {
+    "body": [
+      "---",
+      "toname: \"$1\"",
+      "toaddress: |",
+      "    | $2",
+      "subject: $3",
+      "opening: Dear $4,",
+      "spacing: ${6:1.2}",
+      "---"
+    ],
+    "description": "Add minimal yaml header for letter",
+    "prefix": "letter"
+  },
   "yaml header": {
     "body": ["---", "title: $1", "format: $2", "---"],
     "description": "Add minimal yaml header",
