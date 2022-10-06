@@ -382,7 +382,12 @@
   },
   "shortcodes": {
     "body": "{{ <$1> }}",
-    "description": "add a comment string",
+    "description": "add shortcodes",
     "prefix": "shortcodes"
+  },
+  "video": {
+    "body": "{{ <video: $1> }}",
+    "description": "video shortcode",
+    "prefix": "video"
   }
 }
