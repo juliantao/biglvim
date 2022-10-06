@@ -381,12 +381,12 @@
     "prefix": "<"
   },
   "shortcodes": {
-    "body": "{{ <$1> }}",
+    "body": "{{< $1 >}}",
     "description": "add shortcodes",
     "prefix": "shortcodes"
   },
   "video": {
-    "body": "{{ <video: $1> }}",
+    "body": "{{< video src=\"$1\" >}}",
     "description": "video shortcode",
     "prefix": "video"
   }
