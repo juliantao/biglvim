@@ -26,7 +26,6 @@ lvim.keys.normal_mode["<localleader>z"] = '"=ZoteroCite()<CR>p'
 lvim.keys.normal_mode["<leader>ii"] = ":PasteImg<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-lvim.keys.normal_mode["<localleader>tj"] = ":TaskWikiDone<CR>"
 lvim.builtin.which_key.mappings["tr"] = { "<cmd>RnvimrToggle<cr>", "Ranger" }
 
 -- Plugins
@@ -143,17 +142,18 @@ lvim.plugins = {
 			vim.g.taskwiki_sort_order = "project+,due+,id+,priority-"
 		end,
 	},
-	-- {
-	-- 	"jalvesaq/Nvim-R",
-	-- 	config = function()
-	-- 		vim.g.R_openpdf = 1
-	-- 		vim.g.Rout_more_colors = 1
-	-- 		vim.g.R_set_omnifunc = {}
-	-- 		vim.g.R_auto_omni = {}
-	-- 		vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
-	-- 		vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
-	-- 	end,
-	-- },
+	{
+		"jalvesaq/Nvim-R",
+		config = function()
+			vim.g.R_openpdf = 1
+			vim.g.Rout_more_colors = 1
+			vim.g.R_set_omnifunc = {}
+			vim.g.R_auto_omni = {}
+			vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+			vim.g.R_filetypes = { "r", "rmd", "rrst", "rnoweb", "rhelp" }
+		end,
+	},
 	{
 		"folke/todo-comments.nvim",
 		event = "BufRead",
