@@ -140,21 +140,20 @@ lvim.plugins = {
 			-- vim.g.taskwiki_disable = true
 			vim.g.taskwiki_dont_preserve_folds = "yes"
 			vim.g.taskwiki_disable_concealcursor = "yes"
-			vim.g.taskwiki_maplocalleader = ",t"
 			vim.g.taskwiki_sort_order = "project+,due+,id+,priority-"
 		end,
 	},
-	{
-		"jalvesaq/Nvim-R",
-		config = function()
-			vim.g.R_openpdf = 1
-			vim.g.Rout_more_colors = 1
-			vim.g.R_set_omnifunc = {}
-			vim.g.R_auto_omni = {}
-			vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
-			vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
-		end,
-	},
+	-- {
+	-- 	"jalvesaq/Nvim-R",
+	-- 	config = function()
+	-- 		vim.g.R_openpdf = 1
+	-- 		vim.g.Rout_more_colors = 1
+	-- 		vim.g.R_set_omnifunc = {}
+	-- 		vim.g.R_auto_omni = {}
+	-- 		vim.g.markdown_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+	-- 		vim.g.rmd_fenced_languages = { "r", "python", "bash", "css", "html", "cpp", "latex" }
+	-- 	end,
+	-- },
 	{
 		"folke/todo-comments.nvim",
 		event = "BufRead",
