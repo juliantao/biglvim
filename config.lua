@@ -18,6 +18,7 @@ lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.insert_mode["jf"] = " %>% "
 lvim.keys.insert_mode["<M-t>"] = "<Esc>:TOC<CR>"
 lvim.keys.normal_mode["<M-t>"] = ":TOC<CR>"
+lvim.keys.normal_mode["<C-t>"] = ":ToggleTerm<CR>"
 lvim.keys.insert_mode["<C-B>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
 lvim.keys.insert_mode["<C-z>"] = "<C-r>=ZoteroCite()<CR>"
 lvim.keys.insert_mode["<Localleader>da"] = "<C-r>=strftime('%F')<CR>"
@@ -339,7 +340,7 @@ vim.api.nvim_create_autocmd("BufWinEnter,BufNewFile,BufRead", {
 })
 vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "python" },
-	command = "map <buffer> <leader>bb :TermExec cmd='python3 %'<CR> <C-t>",
+	command = "map <buffer> <leader>bb :TermExec cmd='python3 %'<CR> <C-j>",
 })
 vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "mermaid" },
@@ -351,11 +352,11 @@ vim.api.nvim_create_autocmd("Filetype", {
 })
 vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "quarto", "rmd", "Rmd", "qmd", "rmarkdown", "markdown", "md", "ipynb", "vimwiki" },
-	command = "map <buffer> <leader>bb :TermExec cmd='quarto render %'<CR> <C-t>",
+	command = "map <buffer> <leader>bb :TermExec cmd='quarto render %'<CR> <C-j>",
 })
 vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "quarto", "rmd", "Rmd", "qmd", "rmarkdown", "markdown", "md", "ipynb", "vimwiki" },
-	command = "map <buffer> <leader>qq :TermExec cmd='quarto preview %'<CR> <C-t>",
+	command = "map <buffer> <leader>qq :TermExec cmd='quarto preview %'<CR> <C-j>",
 })
 --Utilies
 
