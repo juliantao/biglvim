@@ -389,5 +389,9 @@
     "body": "{{< video src=\"$1\" >}}",
     "description": "video shortcode",
     "prefix": "video"
+  },
+  "tabset": {
+    "prefix": ["tabset"],
+    "body": ["::: {.panel-tabset}", "", "## $1", ":::"]
   }
 }
