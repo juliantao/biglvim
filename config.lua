@@ -143,6 +143,7 @@ lvim.plugins = {
 			vim.g.taskwiki_dont_preserve_folds = "yes"
 			vim.g.taskwiki_disable_concealcursor = "yes"
 			vim.g.taskwiki_sort_order = "project+,due+,id+,priority-"
+			vim.g.taskwiki_maplocalleader = ",t"
 		end,
 	},
 	{
