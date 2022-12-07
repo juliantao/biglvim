@@ -266,6 +266,10 @@
     "prefix": ["alert"],
     "body": ["[$0]{.alert}"]
   },
+  "highlight": {
+    "prefix": ["highlight"],
+    "body": ["[$0]{.highlight}"]
+  },
   "fade": {
     "prefix": ["fade"],
     "body": ["[$0]{.fade}"]
