@@ -1,15 +1,4 @@
 {
-  "iframe": {
-    "prefix": ["iframe"],
-    "body": [
-      "::: {#fig-${1:cap}}",
-      "",
-      "${2:paste embed info}",
-      "",
-      "${3:Caption}",
-      ":::"
-    ]
-  },
   "fig3": {
     "prefix": ["fig3"],
     "body": [
@@ -151,6 +140,14 @@
     "body": [
       "{data-background-image=\"./img/$1\"  data-background-position=right  data-background-size=contain}"
     ]
+  },
+  "background iframe": {
+    "prefix": ["bgiframe"],
+    "body": ["{data-background-iframe=\"$1\"}"]
+  },
+  "iframe": {
+    "prefix": ["iframe"],
+    "body": ["<iframe src=\"$1\" width=\"1200\" height=\"700\"></iframe>"]
   },
   "pl": {
     "prefix": ["pl"],
