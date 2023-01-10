@@ -320,7 +320,7 @@ require("nvim-web-devicons").set_icon({
 
 -- treesitter
 lvim.builtin.treesitter.ensure_installed = {}
-lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.highlight.disable = { "markdown" }
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
