@@ -360,7 +360,7 @@ vim.api.nvim_create_autocmd("Filetype", {
 })
 vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "quarto", "rmd", "Rmd", "qmd", "rmarkdown", "markdown", "md", "ipynb", "vimwiki" },
-	command = "map <buffer> <leader>ll :TermExec cmd='quarto render --profile local %'<CR> <C-j>",
+	command = "map <buffer> <localleader>ll :TermExec cmd='quarto preview --profile local %'<CR> <C-j>",
 })
 --Utilies
 
