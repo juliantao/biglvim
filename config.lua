@@ -51,7 +51,7 @@ lvim.plugins = {
 	{ "vim-pandoc/vim-pandoc" },
 	{
 		"vim-pandoc/vim-pandoc-syntax",
-		config = function()
+		init = function()
 			-- vim.g["pandoc#syntax#codeblocks#embeds#langs"] = { "python", "r", "cpp", "bash=sh", "latex=tex" }
 			vim.g["pandoc#syntax#conceal#use"] = 0
 		end,
@@ -60,7 +60,7 @@ lvim.plugins = {
 	{ "mracos/mermaid.vim" },
 	{
 		"chrisbra/csv.vim",
-		config = function()
+		init = function()
 			vim.g.csv_nomap_cr = 1
 			vim.g.csv_nomap_s_h = 1
 			vim.g.csv_nomap_s_l = 1
@@ -70,7 +70,7 @@ lvim.plugins = {
 	},
 	{
 		"lervag/vimtex",
-		config = function()
+		init = function()
 			vim.g.vimtex_view_method = "zathura"
 			vim.g.vimtex_complier_progname = "nvr"
 			vim.g.vimtex_fold_enabled = 0
@@ -114,7 +114,7 @@ lvim.plugins = {
 	{
 		"vimwiki/vimwiki",
 		branch = "dev",
-		config = function()
+		init = function()
 			vim.g.vimwiki_list = {
 				{
 					path = "~/Dropbox (ASU)/wiki",
@@ -137,7 +137,7 @@ lvim.plugins = {
 	},
 	{
 		"tools-life/taskwiki",
-		config = function()
+		init = function()
 			-- vim.g.taskwiki_disable = true
 			vim.g.taskwiki_dont_preserve_folds = "yes"
 			vim.g.taskwiki_disable_concealcursor = "yes"
@@ -147,7 +147,7 @@ lvim.plugins = {
 	},
 	{
 		"jalvesaq/Nvim-R",
-		config = function()
+		init = function()
 			vim.g.R_openpdf = 1
 			vim.g.Rout_more_colors = 1
 			vim.g.R_set_omnifunc = {}
@@ -160,7 +160,7 @@ lvim.plugins = {
 	{
 		"folke/todo-comments.nvim",
 		event = "BufRead",
-		config = function()
+		init = function()
 			require("todo-comments").setup()
 		end,
 	},
@@ -169,7 +169,7 @@ lvim.plugins = {
 	{ "reedes/vim-wordy" },
 	{
 		"ekickx/clipboard-image.nvim",
-		config = function()
+		init = function()
 			require("clipboard-image").setup({
 				default = {
 					img_name = function()
@@ -185,13 +185,13 @@ lvim.plugins = {
 	},
 	{
 		"dhruvasagar/vim-table-mode",
-		config = function()
+		init = function()
 			vim.g.table_mode_corner = "|"
 		end,
 	},
 	{
 		"junegunn/vim-easy-align",
-		setup = function()
+		init = function()
 			vim.api.nvim_set_keymap("x", "ga", "<Plug>(EasyAlign)", { noremap = false, silent = true })
 		end,
 		keys = "<Plug>(EasyAlign)",
@@ -203,7 +203,7 @@ lvim.plugins = {
 	-- general interface
 	{
 		"norcalli/nvim-colorizer.lua",
-		config = function()
+		init = function()
 			require("colorizer").setup({ "*" }, {
 				RGB = true, -- #RGB hex codes
 				RRGGBB = true, -- #RRGGBB hex codes
@@ -218,7 +218,7 @@ lvim.plugins = {
 	{
 		"ethanholz/nvim-lastplace",
 		event = "BufRead",
-		config = function()
+		init = function()
 			require("nvim-lastplace").setup({
 				lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
 				lastplace_ignore_filetype = {
@@ -233,7 +233,7 @@ lvim.plugins = {
 	},
 	{
 		"itchyny/calendar.vim",
-		config = function()
+		init = function()
 			vim.g.calendar_google_calendar = 1
 			vim.g.calendar_google_task = 1
 		end,
@@ -241,7 +241,7 @@ lvim.plugins = {
 	{
 		"kevinhwang91/rnvimr",
 		cmd = "RnvimrToggle",
-		config = function()
+		init = function()
 			vim.g.rnvimr_draw_border = 1
 			vim.g.rnvimr_pick_enable = 1
 			vim.g.rnvimr_bw_enable = 1
@@ -250,7 +250,7 @@ lvim.plugins = {
 	{ "sindrets/diffview.nvim" },
 	{
 		"pwntester/octo.nvim",
-		config = function()
+		init = function()
 			require("octo").setup()
 		end,
 	},
