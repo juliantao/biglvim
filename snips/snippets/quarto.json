@@ -211,6 +211,10 @@
     "prefix": ["call"],
     "body": ["::: {.callout-$1}", "$0", ":::"]
   },
+  "todo": {
+    "prefix": ["todo"],
+    "body": ["::: {.callout-tip}", "## TODO:", "", "$0", ":::"]
+  },
   "collapsed notes": {
     "prefix": ["collapse"],
     "body": ["::: {.callout-note collapse=true}", "$0", ":::"]
