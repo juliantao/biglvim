@@ -56,8 +56,8 @@ lvim.plugins = {
 			vim.g["pandoc#syntax#conceal#use"] = 0
 		end,
 	},
-	{ "quarto-dev/quarto-nvim" },
-	{ "jmbuhr/otter.nvim" },
+	{ "quarto-dev/quarto-vim" },
+	-- { "jmbuhr/otter.nvim" },
 	{ "mracos/mermaid.vim" },
 	{
 		"chrisbra/csv.vim",
