@@ -4,8 +4,8 @@ lvim.colorscheme = "gruvbox-material"
 vim.opt.relativenumber = true
 vim.api.nvim_command("set nofoldenable")
 vim.api.nvim_command("set conceallevel=0")
+vim.diagnostic.config({ virtual_text = false })
 lvim.format_on_save = true
-lvim.lsp.diagnostics.virtual_text = false
 lvim.log.level = "warn"
 lvim.lint_on_save = true
 vim.g.python3_host_prog = "/usr/bin/python3"
@@ -318,7 +318,6 @@ lvim.builtin.treesitter.ensure_installed = {}
 lvim.builtin.treesitter.highlight.disable = { "markdown" }
 
 -- LSP
-lvim.lsp.diagnostics.virtual_text = false
 -- require("lspconfig").r_language_server.setup({ filetypes = { "r", "rmd" } })
 require("lspconfig").dotls.setup({})
 -- require("lspconfig").ltex.setup({ filetypes = { "rmd", "bib", "tex", "quarto", "markdown" } })
