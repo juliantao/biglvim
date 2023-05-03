@@ -191,6 +191,18 @@ lvim.plugins = {
 		end,
 		keys = "<Plug>(EasyAlign)",
 	},
+	{
+		"jackMort/ChatGPT.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("chatgpt").setup()
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	},
 
 	-- lsp
 	{ "ray-x/lsp_signature.nvim" },
