@@ -291,6 +291,10 @@
     "prefix": ["due"],
     "body": ["* [ ] ${1:task} -- due:${2:eow}"]
   },
+  "todo task": {
+    "prefix": ["task"],
+    "body": ["* [ ] ${1:task}"]
+  },
   "importmarkdown": {
     "prefix": ["importmd"],
     "body": ["from IPython.display import display, Markdown"]
