@@ -88,7 +88,7 @@ lvim.plugins = {
         augroup vimtex_event_1
             au!
             au User VimtexEventQuit    VimtexClean
-            au User VimtexEventInitPost VimtexCompile
+            " au User VimtexEventInitPost VimtexCompile
         augroup END
         ]])
 			vim.cmd([[
