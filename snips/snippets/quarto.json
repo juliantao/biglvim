@@ -283,6 +283,10 @@
     "prefix": ["br"],
     "body": ["<br/>"]
   },
+  "panel-fill": {
+    "prefix": ["panel"],
+    "body": [".panel-fill"]
+  },
   "todo scheduled": {
     "prefix": ["scheduled"],
     "body": ["* [ ] ${1:task} -- scheduled:${2:eom}"]
