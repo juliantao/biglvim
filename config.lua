@@ -160,7 +160,13 @@ lvim.plugins = {
 			require("todo-comments").setup()
 		end,
 	},
-
+	{
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		inti = function()
+			require("ts_context_commenting").setup()
+			vim.g.skip_ts_context_commentstring_module = true
+		end,
+	},
 	-- prose writing
 	{ "reedes/vim-wordy" },
 	{
