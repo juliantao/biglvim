@@ -39,9 +39,18 @@
     "prefix": ["py"],
     "body": ["```{python} ", "$1", "```"]
   },
+  "pyinline": {
+    "prefix": ["pyinline"],
+    "body": ["`{python} $1`"]
+  },
   "rcode": {
     "prefix": ["rcode"],
     "body": ["```{r} ", "$1", "```"]
+  },
+
+  "rinline": {
+    "prefix": ["rinline"],
+    "body": ["`{r} $1`"]
   },
   "code": {
     "prefix": ["code"],
