@@ -347,10 +347,21 @@ require("lspconfig").dotls.setup({})
 require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" } })
 
 -- Autocommands
-vim.api.nvim_create_autocmd("BufWinEnter,BufNewFile,BufRead", {
+vim.api.nvim_create_autocmd("BufWinEnter", {
 	pattern = { "*.qmd" },
 	command = "set ft=pandoc.quarto",
 })
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+	pattern = { "*.qmd" },
+	command = "set ft=pandoc.quarto",
+})
+
+vim.api.nvim_create_autocmd("BufRead", {
+	pattern = { "*.qmd" },
+	command = "set ft=pandoc.quarto",
+})
+
 vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "python" },
 	command = "map <buffer> <leader>bb :TermExec cmd='python3 %:S'<CR> <C-j>",
