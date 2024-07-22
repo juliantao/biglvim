@@ -131,16 +131,16 @@ lvim.plugins = {
 			vim.g.vimwiki_global_ext = 0
 		end,
 	},
-	{
-		"tools-life/taskwiki",
-		init = function()
-			-- vim.g.taskwiki_disable = true
-			vim.g.taskwiki_dont_preserve_folds = "yes"
-			vim.g.taskwiki_disable_concealcursor = "yes"
-			vim.g.taskwiki_sort_order = "project+,due+,id+,priority-"
-			vim.g.taskwiki_maplocalleader = ",t"
-		end,
-	},
+	-- {
+	-- 	"tools-life/taskwiki",
+	-- 	init = function()
+	-- 		-- vim.g.taskwiki_disable = true
+	-- 		vim.g.taskwiki_dont_preserve_folds = "yes"
+	-- 		vim.g.taskwiki_disable_concealcursor = "yes"
+	-- 		vim.g.taskwiki_sort_order = "project+,due+,id+,priority-"
+	-- 		vim.g.taskwiki_maplocalleader = ",t"
+	-- 	end,
+	-- },
 	{
 		"jalvesaq/Nvim-R",
 		init = function()
