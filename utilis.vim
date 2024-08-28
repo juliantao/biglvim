@@ -42,6 +42,6 @@ augroup END
 
 " readonly options
 " cnoremap sw!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
+let g:suda_smart_edit = 1
 
 " vim:fdm=marker

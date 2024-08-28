@@ -423,5 +423,13 @@
   "tabset": {
     "prefix": ["tabset"],
     "body": ["::: {.panel-tabset}", "", "## $1", ":::"]
+  },
+  "embed": {
+    "prefix": "embed",
+    "body": "{{< embed $1 >}}"
+  },
+  "meta": {
+    "prefix": "meta",
+    "body": "{{< meta $1 >}}"
   }
 }

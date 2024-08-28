@@ -275,6 +275,7 @@ lvim.plugins = {
 	-- 	cmd = "Codi",
 	-- },
 	{ "sirtaj/vim-openscad" },
+	{ "lambdalisue/vim-suda" },
 }
 
 --Builtin Plugins
