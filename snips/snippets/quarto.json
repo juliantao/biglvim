@@ -296,6 +296,11 @@
     "prefix": ["br"],
     "body": ["<br/>"]
   },
+  "geo": {
+    "prefix": ["geo"],
+    "body": ["Géotechnique"]
+  },
+
   "panel-fill": {
     "prefix": ["panel"],
     "body": [".panel-fill"]

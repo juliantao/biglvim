@@ -170,7 +170,7 @@ lvim.plugins = {
 	-- prose writing
 	{ "reedes/vim-wordy" },
 	{
-		"ekickx/clipboard-image.nvim",
+		"juliantao/clipboard-image.nvim",
 		init = function()
 			require("clipboard-image").setup({
 				default = {
