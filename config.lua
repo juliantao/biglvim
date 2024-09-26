@@ -338,8 +338,13 @@ lvim.builtin.treesitter.ensure_installed = {}
 lvim.builtin.treesitter.highlight.disable = { "markdown" }
 
 -- LSP
--- require("lspconfig").r_language_server.setup({ filetypes = { "r", "rmd" } })
+require("lspconfig").r_language_server.setup({ filetypes = { "r", "rmd" } })
+require("lspconfig").lua_ls.setup({})
 require("lspconfig").dotls.setup({})
+require("lspconfig").pyright.setup({})
+require("lspconfig").cssls.setup({})
+require("lspconfig").arduino_language_server.setup({})
+
 -- require("lspconfig").ltex.setup({ filetypes = { "rmd", "bib", "tex", "quarto", "markdown" } })
 -- require("lspconfig").grammarly.setup({ filetypes = { "rmd", "tex", "qmd", "markdown", "vimwiki" } })
 
