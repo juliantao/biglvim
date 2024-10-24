@@ -252,6 +252,10 @@
     "prefix": ["width"],
     "body": ["{width=\"$3\"}"]
   },
+  "tablewidth": {
+    "prefix": ["tablewidth"],
+    "body": ["tbl-colwidths=\"[$3]\""]
+  },
   "hidden": {
     "prefix": ["hidden"],
     "body": ["{visibility=\"hidden\"}"]
