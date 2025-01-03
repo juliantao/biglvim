@@ -100,6 +100,10 @@
     "prefix": ["div"],
     "body": ["::: {$1}", "$0", ":::"]
   },
+  "figdiv": {
+    "prefix": ["figdiv"],
+    "body": ["::: {#fig-$1}", "$0", ":::"]
+  },
   "footnote": {
     "prefix": ["footnote"],
     "body": ["[^$1]$0"]
