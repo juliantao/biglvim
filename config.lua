@@ -20,7 +20,7 @@ lvim.keys.insert_mode["jl"] = " <- "
 lvim.keys.insert_mode["<M-t>"] = "<Esc>:TOC<CR>"
 lvim.keys.normal_mode["<M-t>"] = ":TOC<CR>"
 lvim.keys.normal_mode["<C-t>"] = ":ToggleTerm<CR>"
-lvim.keys.insert_mode["<C-B>"] = "<c-g>u<Esc>[s1z=]a<c-g>u"
+lvim.keys.insert_mode["<C-B>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
 lvim.keys.insert_mode["<C-z>"] = "<C-r>=ZoteroCite()<CR>"
 lvim.keys.insert_mode["<Localleader>da"] = "<C-r>=strftime('%F')<CR>"
 lvim.keys.insert_mode["<Localleader>tm"] = "<C-r>=strftime('%F', localtime() + 86400)<CR>"
@@ -59,82 +59,7 @@ lvim.plugins = {
 		end,
 	},
 	{ "quarto-dev/quarto-vim" },
-
-	-- NEW: Quarto ecosystem plugins
-	{
-		"quarto-dev/quarto-nvim",
-		ft = { "quarto", "markdown" },
-		config = function()
-			require("quarto").setup({
-				debug = false,
-				closePreviewOnExit = true,
-				lspFeatures = {
-					enabled = true,
-					languages = { "r", "python", "julia", "bash", "html" },
-					chunks = "curly", -- 'curly' or 'all'
-					diagnostics = {
-						enabled = true,
-						triggers = { "BufWritePost" },
-					},
-					completion = {
-						enabled = true,
-					},
-				},
-				codeRunner = {
-					enabled = false, -- using your existing terminal setup
-					default_method = nil,
-				},
-			})
-		end,
-		dependencies = {
-			"jmbuhr/otter.nvim",
-			"nvim-treesitter/nvim-treesitter",
-		},
-	},
-	{
-		"jmbuhr/otter.nvim",
-		ft = { "quarto", "markdown", "rmd" },
-		config = function()
-			require("otter").setup({
-				lsp = {
-					hover = {
-						border = "rounded",
-					},
-				},
-				buffers = {
-					set_filetype = true,
-					write_to_disk = false,
-				},
-				strip_wrapping_quote_characters = { '"', "'", "`" },
-				handle_leading_whitespace = true,
-			})
-		end,
-	},
-	{
-		"jmbuhr/cmp-pandoc-references",
-		ft = { "markdown", "quarto", "rmarkdown", "rmd", "pandoc" },
-		config = function()
-			-- This will be configured in the CMP setup below
-		end,
-	},
-	{
-		"jmbuhr/telescope-zotero.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-			"nvim-lua/plenary.nvim",
-			"kkharji/sqlite.lua",
-		},
-		config = function()
-			-- Only load if sqlite is available
-			local ok, _ = pcall(require, "sqlite")
-			if ok then
-				require("telescope").load_extension("zotero")
-			else
-				vim.notify("telescope-zotero requires sqlite.lua - please install it", vim.log.levels.WARN)
-			end
-		end,
-	},
-
+	-- { "jmbuhr/otter.nvim" },
 	{ "mracos/mermaid.vim" },
 	{
 		"chrisbra/csv.vim",
@@ -207,6 +132,16 @@ lvim.plugins = {
 			vim.g.vimwiki_global_ext = 0
 		end,
 	},
+	-- {
+	-- 	"tools-life/taskwiki",
+	-- 	init = function()
+	-- 		-- vim.g.taskwiki_disable = true
+	-- 		vim.g.taskwiki_dont_preserve_folds = "yes"
+	-- 		vim.g.taskwiki_disable_concealcursor = "yes"
+	-- 		vim.g.taskwiki_sort_order = "project+,due+,id+,priority-"
+	-- 		vim.g.taskwiki_maplocalleader = ",t"
+	-- 	end,
+	-- },
 	{
 		"jalvesaq/Nvim-R",
 		init = function()
@@ -251,7 +186,6 @@ lvim.plugins = {
 			})
 		end,
 	},
-	{ "godlygeek/tabular" },
 	{
 		"dhruvasagar/vim-table-mode",
 		init = function()
@@ -337,6 +271,10 @@ lvim.plugins = {
 	},
 
 	-- languages
+	-- {
+	-- 	"metakirby5/codi.vim",
+	-- 	cmd = "Codi",
+	-- },
 	{ "sirtaj/vim-openscad" },
 	{ "lambdalisue/vim-suda" },
 }
@@ -344,12 +282,12 @@ lvim.plugins = {
 --Builtin Plugins
 require("nvim-web-devicons").set_icon({
 	zsh = {
-		icon = "",
+		icon = "",
 		color = "#428850",
 		name = "Zsh",
 	},
 	qmd = {
-		icon = "",
+		icon = "",
 		color = "#519aba",
 		name = "qmd",
 	},
@@ -374,23 +312,23 @@ require("nvim-web-devicons").set_icon({
 		name = "bst",
 	},
 	csl = {
-		icon = "謹",
+		icon = "謹",
 		color = "#e37933",
 		cterm_color = "173",
 		name = "csl",
 	},
 	docx = {
-		icon = "",
+		icon = "",
 		color = "#2b579a",
 		name = "docx",
 	},
 	pptx = {
-		icon = "蠟",
+		icon = "蠟",
 		color = "#d24726",
 		name = "pptx",
 	},
 	xlsx = {
-		icon = "",
+		icon = "",
 		color = "#217346",
 		name = "xlsx",
 	},
@@ -401,7 +339,7 @@ lvim.builtin.treesitter.ensure_installed = {}
 lvim.builtin.treesitter.highlight.disable = { "markdown" }
 
 -- LSP
-require("lspconfig").r_language_server.setup({ filetypes = { "r", "rmd", "quarto" } })
+require("lspconfig").r_language_server.setup({ filetypes = { "r", "rmd" } })
 require("lspconfig").lua_ls.setup({})
 require("lspconfig").dotls.setup({})
 require("lspconfig").pyright.setup({})
@@ -411,13 +349,8 @@ require("lspconfig").arduino_language_server.setup({})
 -- require("lspconfig").ltex.setup({ filetypes = { "rmd", "bib", "tex", "quarto", "markdown" } })
 -- require("lspconfig").grammarly.setup({ filetypes = { "rmd", "tex", "qmd", "markdown", "vimwiki" } })
 
--- Enhanced CMP setup for pandoc references
-lvim.builtin.cmp.sources = vim.list_extend(lvim.builtin.cmp.sources or {}, {
-	{ name = "pandoc_references" },
-	{ name = "otter" },
-})
-
 -- Snippet
+
 require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/lvim/snips" } })
 
 -- Autocommands
@@ -434,15 +367,6 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 vim.api.nvim_create_autocmd("BufRead", {
 	pattern = { "*.qmd" },
 	command = "set ft=pandoc.quarto",
-})
-
--- Enhanced Quarto autocommands
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "quarto" },
-	callback = function()
-		-- Activate otter for embedded language support
-		require("otter").activate({ "r", "python", "julia", "bash", "html" })
-	end,
 })
 
 vim.api.nvim_create_autocmd("Filetype", {
@@ -469,53 +393,6 @@ vim.api.nvim_create_autocmd("Filetype", {
 	pattern = { "quarto", "rmd", "Rmd", "qmd", "rmarkdown", "markdown", "md", "ipynb", "vimwiki" },
 	command = "map <buffer> <localleader>ll :TermExec cmd='quarto preview --profile local %:S'<CR> <C-j>",
 })
-
--- Additional Quarto/Zotero keymaps (only if zotero extension is loaded)
-vim.api.nvim_create_autocmd("User", {
-	pattern = "TelescopePreviewerLoaded",
-	callback = function()
-		local ok, _ = pcall(require, "telescope._extensions.zotero")
-		if ok then
-			lvim.builtin.which_key.mappings["z"] = {
-				name = "Zotero",
-				z = { "<cmd>Telescope zotero<cr>", "Search Zotero" },
-				i = { "<cmd>lua require('telescope').extensions.zotero.insert_citation()<cr>", "Insert Citation" },
-			}
-		end
-	end,
-})
-
--- Otter-specific keymaps for embedded code
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "quarto", "markdown", "rmd" },
-	callback = function()
-		vim.keymap.set(
-			"n",
-			"<localleader>op",
-			require("otter").ask_type_definition,
-			{ desc = "Type definition (otter)" }
-		)
-		vim.keymap.set("n", "<localleader>oh", require("otter").ask_hover, { desc = "Hover (otter)" })
-		vim.keymap.set("n", "<localleader>od", require("otter").ask_definition, { desc = "Definition (otter)" })
-		vim.keymap.set("n", "<localleader>or", require("otter").ask_references, { desc = "References (otter)" })
-		vim.keymap.set("n", "<localleader>orn", require("otter").ask_rename, { desc = "Rename (otter)" })
-		vim.keymap.set("n", "<localleader>of", require("otter").ask_format, { desc = "Format (otter)" })
-	end,
-})
-
-vim.api.nvim_create_user_command("ResponsePattern", function(opts)
-	local count = tonumber(opts.args) or 10 -- Default to 10 if no argument is provided
-	local lines = {}
-	for i = 1, count do
-		table.insert(lines, "### Comment " .. i)
-		table.insert(lines, "")
-		table.insert(lines, "[Response " .. i .. "]{.highlight}")
-		table.insert(lines, "")
-	end
-	vim.api.nvim_buf_set_lines(0, -1, -1, false, lines)
-end, {
-	nargs = "?",
-}) -- Optional argument for number of repetitions
-
 --Utilies
+
 vim.cmd("source " .. "$HOME/.config/lvim/utilis.vim")
